@@ -1,0 +1,22 @@
+# Extra dependencies for the continual-learning layer (cl/).
+# Install AFTER the base VSI environment (scripts/setup_env.sh) — that script
+# pins torch/mmcv/mmdet in an order that pip will happily break if it is
+# allowed to resolve them again here, so nothing below pins torch.
+
+numpy>=1.24
+scipy>=1.10            # Mann-Whitney premise test in the λ* analysis
+PyYAML>=6.0            # configs/tasks_lvb4.yaml
+scikit-learn>=1.3      # kNN memory baseline
+matplotlib>=3.7        # cl/analyze.py figures
+
+# Stage 6 downstream VideoQA only. Skip unless you run run_downstream_qa.py;
+# the Qwen2.5-VL processor needs a recent transformers.
+transformers>=4.49
+accelerate>=0.30
+qwen-vl-utils>=0.0.8
+
+# Optional: the project spec suggests Avalanche for the CL strategies. The
+# strategies in cl/strategies/ are a self-contained ~150-line implementation
+# instead, because avalanche-lib pulls a torch range that conflicts with the
+# mmcv/mmdet pins in the base environment.
+# avalanche-lib>=0.5

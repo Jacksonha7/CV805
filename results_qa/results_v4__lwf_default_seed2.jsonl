@@ -1,0 +1,229 @@
+{"qid": "IGmuaY1jB1w", "task": "T1_text_perception", "lambda": 0.3417802155017853, "pred": "None of the provided options are correct.", "gold": "D", "correct": false}
+{"qid": "GAoK4XjssrM", "task": "T1_text_perception", "lambda": 0.5366913676261902, "pred": "B", "gold": "B", "correct": true}
+{"qid": "LlqsCCa6y58", "task": "T1_text_perception", "lambda": 0.867606520652771, "pred": "C", "gold": "C", "correct": true}
+{"qid": "vJ9hYCUDHTo", "task": "T1_text_perception", "lambda": 0.5543161034584045, "pred": "B", "gold": "B", "correct": true}
+{"qid": "-iCLYpeghJs", "task": "T1_text_perception", "lambda": 0.48028868436813354, "pred": "D", "gold": "D", "correct": true}
+{"qid": "oddHY1vwcjo", "task": "T1_text_perception", "lambda": 0.16996793448925018, "pred": "D", "gold": "C", "correct": false}
+{"qid": "@recipesbyanne-7234536361296940314", "task": "T1_text_perception", "lambda": 0.656365156173706, "pred": "D", "gold": "D", "correct": true}
+{"qid": "NS2V_OHYkvA", "task": "T1_text_perception", "lambda": 0.7154832482337952, "pred": "A", "gold": "A", "correct": true}
+{"qid": "KlZpZVphLrc", "task": "T1_text_perception", "lambda": 0.47919702529907227, "pred": "B", "gold": "A", "correct": false}
+{"qid": "TlaX2iIYZD4", "task": "T1_text_perception", "lambda": 0.4314744472503662, "pred": "C", "gold": "C", "correct": true}
+{"qid": "I-yg_3yx6iA", "task": "T1_text_perception", "lambda": 0.6782902479171753, "pred": "D", "gold": "D", "correct": true}
+{"qid": "OLO19ZtdRwQ", "task": "T1_text_perception", "lambda": 0.379097044467926, "pred": "A", "gold": "A", "correct": true}
+{"qid": "gURB1JwPfJw", "task": "T1_text_perception", "lambda": 0.48769134283065796, "pred": "C", "gold": "C", "correct": true}
+{"qid": "IuVyCbtGBFQ", "task": "T1_text_perception", "lambda": 0.4141465127468109, "pred": "C", "gold": "C", "correct": true}
+{"qid": "bAGhXcYc0o4", "task": "T1_text_perception", "lambda": 0.7726480960845947, "pred": "D", "gold": "D", "correct": true}
+{"qid": "JpjytHmGHZ4", "task": "T1_text_perception", "lambda": 0.29228895902633667, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@healthfood-7125042270381853995", "task": "T1_text_perception", "lambda": 0.7003722786903381, "pred": "C", "gold": "C", "correct": true}
+{"qid": "eE5Z7gDbgVA", "task": "T1_text_perception", "lambda": 0.34322690963745117, "pred": "A. Round tattoo", "gold": "B", "correct": false}
+{"qid": "ZfapKqwklG4", "task": "T1_text_perception", "lambda": 0.2785016894340515, "pred": "C", "gold": "C", "correct": true}
+{"qid": "0t1vtW0cT1E", "task": "T1_text_perception", "lambda": 0.46792885661125183, "pred": "D. Pointing at the mirror with", "gold": "D", "correct": true}
+{"qid": "ysRFFN5nzqE", "task": "T1_text_perception", "lambda": 0.2976731061935425, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@lisolna-7203500499360877829", "task": "T1_text_perception", "lambda": 0.8552491664886475, "pred": "B. All black face", "gold": "D", "correct": false}
+{"qid": "_g3Y_mk64Wc", "task": "T1_text_perception", "lambda": 0.6937461495399475, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@placesunleashed-7298820532466683142", "task": "T1_text_perception", "lambda": 0.9604647159576416, "pred": "B. circular structured object", "gold": "B", "correct": true}
+{"qid": "FnKDgC9aNu0", "task": "T1_text_perception", "lambda": 0.658650815486908, "pred": "D", "gold": "A", "correct": false}
+{"qid": "pZ-9hGQNHuA", "task": "T1_text_perception", "lambda": 0.1929381936788559, "pred": "D", "gold": "D", "correct": true}
+{"qid": "cceTeD4JADU", "task": "T1_text_perception", "lambda": 0.8479374647140503, "pred": "A. 2", "gold": "C", "correct": false}
+{"qid": "mld0TnA2jEs", "task": "T1_text_perception", "lambda": 0.3019205927848816, "pred": "C", "gold": "A", "correct": false}
+{"qid": "hXFfPjytMo0", "task": "T1_text_perception", "lambda": 0.9279538989067078, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@healthfood-7267233980473314606", "task": "T1_text_perception", "lambda": 0.9596355557441711, "pred": "B", "gold": "B", "correct": true}
+{"qid": "nvG2YMWiwqU", "task": "T1_text_perception", "lambda": 0.19980889558792114, "pred": "B. She is handing the food in", "gold": "B", "correct": true}
+{"qid": "H_b5d-rLXJU", "task": "T1_text_perception", "lambda": 0.7015050649642944, "pred": "D", "gold": "C", "correct": false}
+{"qid": "5Ugjg2ru5QQ", "task": "T1_text_perception", "lambda": 0.7268396019935608, "pred": "B", "gold": "D", "correct": false}
+{"qid": "5qMcDQd17Y4", "task": "T1_text_perception", "lambda": 0.4853242337703705, "pred": "D", "gold": "D", "correct": true}
+{"qid": "3zv9RkDPX14", "task": "T1_text_perception", "lambda": 0.5946395397186279, "pred": "A. Black gloves", "gold": "A", "correct": true}
+{"qid": "oiBhGhROP5o", "task": "T1_text_perception", "lambda": 0.6938781142234802, "pred": "B", "gold": "B", "correct": true}
+{"qid": "x4UBaEojM6U", "task": "T1_text_perception", "lambda": 0.7206997275352478, "pred": "D", "gold": "D", "correct": true}
+{"qid": "qZVBFAtfp2A", "task": "T1_text_perception", "lambda": 0.7696239352226257, "pred": "D. Pink jacket", "gold": "D", "correct": true}
+{"qid": "x4dFLY_-vKs", "task": "T1_text_perception", "lambda": 0.30489879846572876, "pred": "A. black cap", "gold": "A", "correct": true}
+{"qid": "SCZ_Z4NnikA", "task": "T2_visual_perception", "lambda": 0.7940001487731934, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@placesunleashed-7303594391850044678", "task": "T2_visual_perception", "lambda": 0.9650303721427917, "pred": "D", "gold": "D", "correct": true}
+{"qid": "UMFy3keSk-s", "task": "T2_visual_perception", "lambda": 0.2729632258415222, "pred": "D", "gold": "D", "correct": true}
+{"qid": "athabNMGceo", "task": "T2_visual_perception", "lambda": 0.9312726259231567, "pred": "C", "gold": "C", "correct": true}
+{"qid": "OmhVj_-cfH0", "task": "T2_visual_perception", "lambda": 0.2701391577720642, "pred": "C. Gray", "gold": "C", "correct": true}
+{"qid": "LKQK0lud4fo", "task": "T2_visual_perception", "lambda": 0.581009030342102, "pred": "A. Closing her eyes", "gold": "E", "correct": false}
+{"qid": "@kerstinong-6965059948090821890", "task": "T2_visual_perception", "lambda": 0.9162854552268982, "pred": "B. Running", "gold": "B", "correct": true}
+{"qid": "fO7nwCix8xU", "task": "T2_visual_perception", "lambda": 0.6234346628189087, "pred": "E. Table lamp", "gold": "E", "correct": true}
+{"qid": "gAgCnu82RHE", "task": "T2_visual_perception", "lambda": 0.815244197845459, "pred": "D", "gold": "D", "correct": true}
+{"qid": "HvSEKzpSdzw", "task": "T2_visual_perception", "lambda": 0.849010169506073, "pred": "A", "gold": "D", "correct": false}
+{"qid": "X29dPzJIMbA", "task": "T2_visual_perception", "lambda": 0.6837269067764282, "pred": "B", "gold": "C", "correct": false}
+{"qid": "mFliMGufpwc", "task": "T2_visual_perception", "lambda": 0.7205688953399658, "pred": "A", "gold": "A", "correct": true}
+{"qid": "lcEaHk8f4Co", "task": "T2_visual_perception", "lambda": 0.2691543400287628, "pred": "B", "gold": "B", "correct": true}
+{"qid": "M-YfPangEfA", "task": "T2_visual_perception", "lambda": 0.47181105613708496, "pred": "E", "gold": "D", "correct": false}
+{"qid": "NIxyQQfuVoc", "task": "T2_visual_perception", "lambda": 0.2101740837097168, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@luxtravelbe-7273938266183847200", "task": "T2_visual_perception", "lambda": 0.9297111630439758, "pred": "D", "gold": "D", "correct": true}
+{"qid": "kbRtl58u_kk", "task": "T2_visual_perception", "lambda": 0.8724222779273987, "pred": "D", "gold": "D", "correct": true}
+{"qid": "duxO1EZ650E", "task": "T2_visual_perception", "lambda": 0.49409306049346924, "pred": "C", "gold": "C", "correct": true}
+{"qid": "T1K4rgs-1b8", "task": "T2_visual_perception", "lambda": 0.7409116625785828, "pred": "B", "gold": "A", "correct": false}
+{"qid": "yU9fGAEcxJY", "task": "T2_visual_perception", "lambda": 0.3025053143501282, "pred": "A. Mix the two together", "gold": "A", "correct": true}
+{"qid": "g_kziK-UOSU", "task": "T2_visual_perception", "lambda": 0.9619958996772766, "pred": "B", "gold": "D", "correct": false}
+{"qid": "pFpZvRsEGZs", "task": "T2_visual_perception", "lambda": 0.45550453662872314, "pred": "A. black", "gold": "C", "correct": false}
+{"qid": "@emsiiees-7296863219178638594", "task": "T2_visual_perception", "lambda": 0.9110536575317383, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@lisolna-7231929658869107994", "task": "T2_visual_perception", "lambda": 0.8873631358146667, "pred": "B", "gold": "B", "correct": true}
+{"qid": "FoeeEQ0VVFE", "task": "T2_visual_perception", "lambda": 0.5665144324302673, "pred": "E", "gold": "A", "correct": false}
+{"qid": "jbPR2SJuFHg", "task": "T2_visual_perception", "lambda": 0.9131366014480591, "pred": "C", "gold": "C", "correct": true}
+{"qid": "1vvYsirvA2I", "task": "T2_visual_perception", "lambda": 0.48940831422805786, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@movie.explained6-7278310085217094914", "task": "T2_visual_perception", "lambda": 0.644416332244873, "pred": "B. using the newspaper to block the", "gold": "B", "correct": true}
+{"qid": "@placesunleashed-7297000148201262341", "task": "T2_visual_perception", "lambda": 0.8959024548530579, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@luxtravelbe-7233851486474636570", "task": "T2_visual_perception", "lambda": 0.8102993369102478, "pred": "B", "gold": "E", "correct": false}
+{"qid": "UwlKYM2Sotg", "task": "T2_visual_perception", "lambda": 0.5352466106414795, "pred": "A. Folded his arms in front", "gold": "D", "correct": false}
+{"qid": "@lisolna-7184160724715883781", "task": "T2_visual_perception", "lambda": 0.9641731977462769, "pred": "D", "gold": "D", "correct": true}
+{"qid": "UKU-W5bBCwY", "task": "T2_visual_perception", "lambda": 0.4017375111579895, "pred": "E", "gold": "E", "correct": true}
+{"qid": "MvgJAD6tZXo", "task": "T2_visual_perception", "lambda": 0.6186093091964722, "pred": "C", "gold": "D", "correct": false}
+{"qid": "JwoBdRC2fzE", "task": "T2_visual_perception", "lambda": 0.7073025107383728, "pred": "D. Wrestling match", "gold": "D", "correct": true}
+{"qid": "F2i-LchFVCU", "task": "T2_visual_perception", "lambda": 0.676160454750061, "pred": "C", "gold": "C", "correct": true}
+{"qid": "Owmy5Vu3BnA", "task": "T2_visual_perception", "lambda": 0.2348550707101822, "pred": "D", "gold": "D", "correct": true}
+{"qid": "JLBsG65WoVU", "task": "T2_visual_perception", "lambda": 0.43626129627227783, "pred": "C", "gold": "A", "correct": false}
+{"qid": "2W2ZkYARds4", "task": "T2_visual_perception", "lambda": 0.7421479225158691, "pred": "C", "gold": "C", "correct": true}
+{"qid": "tGiRbGGwRj8", "task": "T2_visual_perception", "lambda": 0.44054773449897766, "pred": "C", "gold": "B", "correct": false}
+{"qid": "@thatrecipe.us-7262468242692689194", "task": "T2_visual_perception", "lambda": 0.9685492515563965, "pred": "C", "gold": "D", "correct": false}
+{"qid": "Sn7JPKbG6tY", "task": "T2_visual_perception", "lambda": 0.41849449276924133, "pred": "E", "gold": "A", "correct": false}
+{"qid": "NHIT9vq6mJU", "task": "T2_visual_perception", "lambda": 0.7131669521331787, "pred": "E", "gold": "E", "correct": true}
+{"qid": "UbNyMSwoT5A", "task": "T2_visual_perception", "lambda": 0.5529125928878784, "pred": "B", "gold": "E", "correct": false}
+{"qid": "Jaw7eWzgWr0", "task": "T2_visual_perception", "lambda": 0.4466055631637573, "pred": "C. black", "gold": "C", "correct": true}
+{"qid": "T15Kv6dtYO0", "task": "T2_visual_perception", "lambda": 0.6921598315238953, "pred": "C. red", "gold": "C", "correct": true}
+{"qid": "gJuOMPiixUA", "task": "T2_visual_perception", "lambda": 0.7286927103996277, "pred": "None of the above.", "gold": "A", "correct": false}
+{"qid": "marOr6mJefE", "task": "T2_visual_perception", "lambda": 0.3819310963153839, "pred": "C. driving", "gold": "C", "correct": true}
+{"qid": "KTY9bogonyw", "task": "T2_visual_perception", "lambda": 0.3429597020149231, "pred": "D. Raising one hand", "gold": "B", "correct": false}
+{"qid": "_kQXNFG664Y", "task": "T2_visual_perception", "lambda": 0.6505024433135986, "pred": "D", "gold": "D", "correct": true}
+{"qid": "N4VtpYgZLVg", "task": "T2_visual_perception", "lambda": 0.37889423966407776, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@kelseyinlondon-7068018011139050758", "task": "T2_visual_perception", "lambda": 0.7317994236946106, "pred": "E", "gold": "E", "correct": true}
+{"qid": "e11Q4ThFu5A", "task": "T2_visual_perception", "lambda": 0.8633965849876404, "pred": "B. Transparent glass cup", "gold": "B", "correct": true}
+{"qid": "VkNF0rXuDXw", "task": "T2_visual_perception", "lambda": 0.46138429641723633, "pred": "D", "gold": "D", "correct": true}
+{"qid": "2ekjGl8yWZk", "task": "T2_visual_perception", "lambda": 0.2846193015575409, "pred": "A", "gold": "A", "correct": true}
+{"qid": "u5NAcHhI_Uc", "task": "T2_visual_perception", "lambda": 0.2692255973815918, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@movie.explained6-7268213090708245761", "task": "T2_visual_perception", "lambda": 0.7128762602806091, "pred": "B", "gold": "B", "correct": true}
+{"qid": "YehqA9xoGTY", "task": "T2_visual_perception", "lambda": 0.6122444868087769, "pred": "A. Talking to the camera", "gold": "A", "correct": true}
+{"qid": "@placesunleashed-7324498849857326341", "task": "T2_visual_perception", "lambda": 0.9391061067581177, "pred": "D", "gold": "D", "correct": true}
+{"qid": "DX-mYMYf8jI", "task": "T2_visual_perception", "lambda": 0.4357888996601105, "pred": "D", "gold": "D", "correct": true}
+{"qid": "tCnelzIAHA0", "task": "T2_visual_perception", "lambda": 0.8499115109443665, "pred": "D", "gold": "D", "correct": true}
+{"qid": "d8H7hgQY9ew", "task": "T2_visual_perception", "lambda": 0.4319682717323303, "pred": "C", "gold": "C", "correct": true}
+{"qid": "mq6L8CnNJXc", "task": "T2_visual_perception", "lambda": 0.4261648952960968, "pred": "B. It is a silver square fast", "gold": "B", "correct": true}
+{"qid": "i6C6r2g4Y7Q", "task": "T2_visual_perception", "lambda": 0.9309940934181213, "pred": "B. He walks forward into the crowd", "gold": "A", "correct": false}
+{"qid": "@lisolna-7198577717292322054", "task": "T2_visual_perception", "lambda": 0.9515754580497742, "pred": "B", "gold": "B", "correct": true}
+{"qid": "qjY9kmveQAk", "task": "T2_visual_perception", "lambda": 0.7440140843391418, "pred": "C", "gold": "C", "correct": true}
+{"qid": "JIoE18JYGcM", "task": "T2_visual_perception", "lambda": 0.7139062285423279, "pred": "B. black", "gold": "B", "correct": true}
+{"qid": "6hBbXVkgxGE", "task": "T2_visual_perception", "lambda": 0.8406620025634766, "pred": "E", "gold": "D", "correct": false}
+{"qid": "7Q8d8Vvk6oo", "task": "T2_visual_perception", "lambda": 0.561029314994812, "pred": "B. Running", "gold": "B", "correct": true}
+{"qid": "49YMA0f1yhI", "task": "T2_visual_perception", "lambda": 0.21650929749011993, "pred": "B", "gold": "B", "correct": true}
+{"qid": "t48HXAjjDAU", "task": "T2_visual_perception", "lambda": 0.6105276346206665, "pred": "C", "gold": "C", "correct": true}
+{"qid": "tdA5atpqaAc", "task": "T2_visual_perception", "lambda": 0.6974483132362366, "pred": "B. Placing the meat from the", "gold": "B", "correct": true}
+{"qid": "MPQn_orwpfA", "task": "T3_text_relation", "lambda": 0.35183945298194885, "pred": "B", "gold": "B", "correct": true}
+{"qid": "X5v4nBo5y28", "task": "T3_text_relation", "lambda": 0.8272729516029358, "pred": "E", "gold": "E", "correct": true}
+{"qid": "hg2Q_O5b9w4", "task": "T3_text_relation", "lambda": 0.4599619209766388, "pred": "C", "gold": "C", "correct": true}
+{"qid": "oI975O1BUu0", "task": "T3_text_relation", "lambda": 0.47045671939849854, "pred": "A", "gold": "C", "correct": false}
+{"qid": "d-GKQeu4S6M", "task": "T3_text_relation", "lambda": 0.33015668392181396, "pred": "D", "gold": "B", "correct": false}
+{"qid": "acAWfzV__XI", "task": "T3_text_relation", "lambda": 0.7634267210960388, "pred": "B. Draws a blue arrow on the", "gold": "D", "correct": false}
+{"qid": "HWyDOQrYtCk", "task": "T3_text_relation", "lambda": 0.5630283951759338, "pred": "C", "gold": "C", "correct": true}
+{"qid": "VLInjyogciw", "task": "T3_text_relation", "lambda": 0.35216695070266724, "pred": "B", "gold": "C", "correct": false}
+{"qid": "Z9JSvDVMSm0", "task": "T3_text_relation", "lambda": 0.20719262957572937, "pred": "C", "gold": "C", "correct": true}
+{"qid": "aX_HgA5SNLQ", "task": "T3_text_relation", "lambda": 0.4234636723995209, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@placesunleashed-7337436458078260485", "task": "T3_text_relation", "lambda": 0.973290741443634, "pred": "C", "gold": "B", "correct": false}
+{"qid": "yz3lOAe32Tw", "task": "T3_text_relation", "lambda": 0.8072728514671326, "pred": "E", "gold": "A", "correct": false}
+{"qid": "j6beJTHUT_c", "task": "T3_text_relation", "lambda": 0.9423869252204895, "pred": "C", "gold": "C", "correct": true}
+{"qid": "vpKtHB8x0js", "task": "T3_text_relation", "lambda": 0.8193145394325256, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@kerstinong-7197781091162279169", "task": "T3_text_relation", "lambda": 0.9227674603462219, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@placesunleashed-7285075986662624518", "task": "T3_text_relation", "lambda": 0.9539068341255188, "pred": "A", "gold": "A", "correct": true}
+{"qid": "QPth_xqBXGY", "task": "T3_text_relation", "lambda": 0.9263074398040771, "pred": "E", "gold": "C", "correct": false}
+{"qid": "lN3WnXMaE0o", "task": "T3_text_relation", "lambda": 0.6542478203773499, "pred": "D", "gold": "C", "correct": false}
+{"qid": "1pxrIj9Xyps", "task": "T3_text_relation", "lambda": 0.6785346269607544, "pred": "C. Turned his head to the", "gold": "C", "correct": true}
+{"qid": "E7FSg22MdKE", "task": "T3_text_relation", "lambda": 0.47530311346054077, "pred": "A. lamp", "gold": "A", "correct": true}
+{"qid": "Efuyl2Anehg", "task": "T3_text_relation", "lambda": 0.390322744846344, "pred": "E", "gold": "A", "correct": false}
+{"qid": "@placesunleashed-7308098412078025989", "task": "T3_text_relation", "lambda": 0.9324793815612793, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@movie.explained6-7275485247351901442", "task": "T3_text_relation", "lambda": 0.6298146843910217, "pred": "B. He falls to the ground.", "gold": "D", "correct": false}
+{"qid": "jvkmcX47bKU", "task": "T3_text_relation", "lambda": 0.7170773148536682, "pred": "A", "gold": "B", "correct": false}
+{"qid": "ZL07dkaoHOg", "task": "T3_text_relation", "lambda": 0.8503147959709167, "pred": "B", "gold": "B", "correct": true}
+{"qid": "WLl3SeraTV0", "task": "T3_text_relation", "lambda": 0.8751601576805115, "pred": "B", "gold": "B", "correct": true}
+{"qid": "PbiTIR8N4Hc", "task": "T3_text_relation", "lambda": 0.7186779975891113, "pred": "E", "gold": "E", "correct": true}
+{"qid": "bXRuqcmTIuk", "task": "T3_text_relation", "lambda": 0.5292463898658752, "pred": "D", "gold": "E", "correct": false}
+{"qid": "VGQ_djSR7zE", "task": "T3_text_relation", "lambda": 0.8045400381088257, "pred": "B", "gold": "B", "correct": true}
+{"qid": "3Qv2K_0GEE0", "task": "T3_text_relation", "lambda": 0.8939332962036133, "pred": "B. yes", "gold": "C", "correct": false}
+{"qid": "vix2_R79-l4", "task": "T3_text_relation", "lambda": 0.13514742255210876, "pred": "C. The phone screen is black", "gold": "B", "correct": false}
+{"qid": "Jim_NG0PYpc", "task": "T3_text_relation", "lambda": 0.8732143044471741, "pred": "A", "gold": "A", "correct": true}
+{"qid": "h2RbVVz3NZc", "task": "T3_text_relation", "lambda": 0.9151172637939453, "pred": "C", "gold": "C", "correct": true}
+{"qid": "_qepWb_NVj4", "task": "T3_text_relation", "lambda": 0.5773402452468872, "pred": "D", "gold": "D", "correct": true}
+{"qid": "kOZnpwI2hIM", "task": "T3_text_relation", "lambda": 0.49737048149108887, "pred": "D", "gold": "D", "correct": true}
+{"qid": "VNvH5u5CWV8", "task": "T3_text_relation", "lambda": 0.9705164432525635, "pred": "B", "gold": "D", "correct": false}
+{"qid": "iDFDxwPTjeU", "task": "T3_text_relation", "lambda": 0.8332269787788391, "pred": "D", "gold": "D", "correct": true}
+{"qid": "X0U3fP0tZyY", "task": "T3_text_relation", "lambda": 0.7924795150756836, "pred": "B", "gold": "B", "correct": true}
+{"qid": "_Y1pW77M3Pg", "task": "T3_text_relation", "lambda": 0.4471415579319, "pred": "C", "gold": "B", "correct": false}
+{"qid": "@movie.explained6-7269647281668852993", "task": "T3_text_relation", "lambda": 0.7081248760223389, "pred": "C", "gold": "E", "correct": false}
+{"qid": "pGEF7Tme3Tk", "task": "T3_text_relation", "lambda": 0.38795676827430725, "pred": "A", "gold": "D", "correct": false}
+{"qid": "3hyPwjkdHEA", "task": "T3_text_relation", "lambda": 0.5539787411689758, "pred": "A", "gold": "C", "correct": false}
+{"qid": "wGWbI3BHVM8", "task": "T3_text_relation", "lambda": 0.4235793948173523, "pred": "A", "gold": "A", "correct": true}
+{"qid": "AYMdAVxALP4", "task": "T3_text_relation", "lambda": 0.8547056913375854, "pred": "B. falls down", "gold": "B", "correct": true}
+{"qid": "soNQYQXrx_A", "task": "T3_text_relation", "lambda": 0.6576499342918396, "pred": "C", "gold": "A", "correct": false}
+{"qid": "GdFMKGNFXaE", "task": "T3_text_relation", "lambda": 0.46872758865356445, "pred": "C. Took off his clothes and threw", "gold": "E", "correct": false}
+{"qid": "NWOF4GqpWaw", "task": "T3_text_relation", "lambda": 0.9221343398094177, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@placesunleashed-7283971258755140869", "task": "T3_text_relation", "lambda": 0.9618492722511292, "pred": "B", "gold": "A", "correct": false}
+{"qid": "UUaiqR1I454", "task": "T3_text_relation", "lambda": 0.4843345284461975, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@_eat_sleep_travel_repeat-7296468146473536800", "task": "T3_text_relation", "lambda": 0.9356496930122375, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@healthfood-6874943613630041350", "task": "T3_text_relation", "lambda": 0.9185217618942261, "pred": "D", "gold": "D", "correct": true}
+{"qid": "6moss7hGbvg", "task": "T3_text_relation", "lambda": 0.8764516115188599, "pred": "B", "gold": "B", "correct": true}
+{"qid": "UM0VOrAtnPA", "task": "T4_visual_relation", "lambda": 0.9190167784690857, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@recipesbyanne-7161798161395240197", "task": "T4_visual_relation", "lambda": 0.9032300114631653, "pred": "D", "gold": "D", "correct": true}
+{"qid": "XuQswmEPgxU", "task": "T4_visual_relation", "lambda": 0.689020574092865, "pred": "A", "gold": "A", "correct": true}
+{"qid": "Ro_8-CCORzk", "task": "T4_visual_relation", "lambda": 0.5216887593269348, "pred": "C", "gold": "C", "correct": true}
+{"qid": "Ng2rNm6Nwsg", "task": "T4_visual_relation", "lambda": 0.564213752746582, "pred": "A. Three men appear on the screen", "gold": "D", "correct": false}
+{"qid": "@kerstinong-7097604725134118146", "task": "T4_visual_relation", "lambda": 0.9805498719215393, "pred": "A", "gold": "A", "correct": true}
+{"qid": "il_wMYlDQ6I", "task": "T4_visual_relation", "lambda": 0.7430508732795715, "pred": "B. remaining on the flat ground", "gold": "A", "correct": false}
+{"qid": "k4jiEuZbN-4", "task": "T4_visual_relation", "lambda": 0.32503440976142883, "pred": "C", "gold": "E", "correct": false}
+{"qid": "HPunfsyjETs", "task": "T4_visual_relation", "lambda": 0.2947450578212738, "pred": "C", "gold": "C", "correct": true}
+{"qid": "dCscvoOX2as", "task": "T4_visual_relation", "lambda": 0.4879645109176636, "pred": "E", "gold": "C", "correct": false}
+{"qid": "ozpGTw6DrXs", "task": "T4_visual_relation", "lambda": 0.4182990491390228, "pred": "A", "gold": "A", "correct": true}
+{"qid": "mS1QPVgBDQo", "task": "T4_visual_relation", "lambda": 0.5478999614715576, "pred": "A. It is placed vertically on the", "gold": "A", "correct": true}
+{"qid": "O6UedmnRJc0", "task": "T4_visual_relation", "lambda": 0.3585701584815979, "pred": "C", "gold": "C", "correct": true}
+{"qid": "PQRyGacBRA4", "task": "T4_visual_relation", "lambda": 0.8509458899497986, "pred": "B", "gold": "D", "correct": false}
+{"qid": "@lisolna-7315451966732193057", "task": "T4_visual_relation", "lambda": 0.9500765800476074, "pred": "C", "gold": "E", "correct": false}
+{"qid": "mHARxee4EzQ", "task": "T4_visual_relation", "lambda": 0.9221158623695374, "pred": "A", "gold": "A", "correct": true}
+{"qid": "WM78_KqcrSY", "task": "T4_visual_relation", "lambda": 0.3254614472389221, "pred": "D", "gold": "D", "correct": true}
+{"qid": "yn7oTvw8QRY", "task": "T4_visual_relation", "lambda": 0.5448717474937439, "pred": "D", "gold": "D", "correct": true}
+{"qid": "wxWo44MoCTI", "task": "T4_visual_relation", "lambda": 0.8493943214416504, "pred": "D", "gold": "B", "correct": false}
+{"qid": "qyaQ-wfojbM", "task": "T4_visual_relation", "lambda": 0.8830596208572388, "pred": "C", "gold": "B", "correct": false}
+{"qid": "@jonijawne-7184469162956246277", "task": "T4_visual_relation", "lambda": 0.9394506216049194, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@lisolna-7282789187676294432", "task": "T4_visual_relation", "lambda": 0.959784209728241, "pred": "E", "gold": "E", "correct": true}
+{"qid": "F4bDyyEO4PU", "task": "T4_visual_relation", "lambda": 0.8476477265357971, "pred": "A", "gold": "A", "correct": true}
+{"qid": "mFcEWmtn3ag", "task": "T4_visual_relation", "lambda": 0.40843528509140015, "pred": "None of the provided options (A,", "gold": "D", "correct": false}
+{"qid": "22iOyzE8Ec0", "task": "T4_visual_relation", "lambda": 0.8649778962135315, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@placesunleashed-7319588197858610438", "task": "T4_visual_relation", "lambda": 0.9207994341850281, "pred": "C", "gold": "B", "correct": false}
+{"qid": "@placesunleashed-7321079612488862981", "task": "T4_visual_relation", "lambda": 0.9714861512184143, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@lisolna-7288701821369978144", "task": "T4_visual_relation", "lambda": 0.969456672668457, "pred": "None of the provided options accurately describe the", "gold": "B", "correct": false}
+{"qid": "akoJDx23QWU", "task": "T4_visual_relation", "lambda": 0.851071834564209, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@lisolna-7235995901477604635", "task": "T4_visual_relation", "lambda": 0.9698545932769775, "pred": "E", "gold": "E", "correct": true}
+{"qid": "XVXczyheik0", "task": "T4_visual_relation", "lambda": 0.4732569456100464, "pred": "E", "gold": "C", "correct": false}
+{"qid": "OGaML8Gg8JQ", "task": "T4_visual_relation", "lambda": 0.431358277797699, "pred": "A", "gold": "A", "correct": true}
+{"qid": "LHXS0QR1ThA", "task": "T4_visual_relation", "lambda": 0.6200235486030579, "pred": "B", "gold": "B", "correct": true}
+{"qid": "ErGYJ7kqIow", "task": "T4_visual_relation", "lambda": 0.2241770327091217, "pred": "E", "gold": "C", "correct": false}
+{"qid": "SO3czkzeFjw", "task": "T4_visual_relation", "lambda": 0.5671632885932922, "pred": "B", "gold": "C", "correct": false}
+{"qid": "JDtVwz1R-kI", "task": "T4_visual_relation", "lambda": 0.4237932860851288, "pred": "B. In a black car", "gold": "E", "correct": false}
+{"qid": "2Uh_KNmsoqI", "task": "T4_visual_relation", "lambda": 0.8991401791572571, "pred": "B", "gold": "C", "correct": false}
+{"qid": "td35F9LNazA", "task": "T4_visual_relation", "lambda": 0.3035847544670105, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@tiffycooks-7022693587703926022", "task": "T4_visual_relation", "lambda": 0.9149370193481445, "pred": "D", "gold": "D", "correct": true}
+{"qid": "VFXJnbnN5ro", "task": "T4_visual_relation", "lambda": 0.9005404710769653, "pred": "D", "gold": "D", "correct": true}
+{"qid": "PCz04UJFaUY", "task": "T4_visual_relation", "lambda": 0.7005405426025391, "pred": "D", "gold": "E", "correct": false}
+{"qid": "ZsnfXfuGRrg", "task": "T4_visual_relation", "lambda": 0.5344235301017761, "pred": "B. The book is opened.", "gold": "B", "correct": true}
+{"qid": "LAQRjgx_OY8", "task": "T4_visual_relation", "lambda": 0.4947206974029541, "pred": "E", "gold": "C", "correct": false}
+{"qid": "WHxBO7XecSY", "task": "T4_visual_relation", "lambda": 0.8601164221763611, "pred": "E", "gold": "E", "correct": true}
+{"qid": "npLd4WTSQsM", "task": "T4_visual_relation", "lambda": 0.25698286294937134, "pred": "D", "gold": "D", "correct": true}
+{"qid": "M5YKW6fhlss", "task": "T4_visual_relation", "lambda": 0.6092557311058044, "pred": "C", "gold": "B", "correct": false}
+{"qid": "iJk-HMfO4yQ", "task": "T4_visual_relation", "lambda": 0.4865642488002777, "pred": "C", "gold": "C", "correct": true}
+{"qid": "Oht0i1DACcA", "task": "T4_visual_relation", "lambda": 0.3030286133289337, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@kerstinong-6976239624578419969", "task": "T4_visual_relation", "lambda": 0.9693556427955627, "pred": "C. Tapped the reclining woman", "gold": "C", "correct": true}
+{"qid": "lNReCCShKJQ", "task": "T4_visual_relation", "lambda": 0.46355900168418884, "pred": "B. On a square during a military", "gold": "D", "correct": false}
+{"qid": "by3NxI0dA6w", "task": "T4_visual_relation", "lambda": 0.8512293696403503, "pred": "A. From white to blackish-gray", "gold": "A", "correct": true}
+{"qid": "3avWNHoEDAg", "task": "T4_visual_relation", "lambda": 0.468273401260376, "pred": "B. First, continuously flowing red lava", "gold": "B", "correct": true}
+{"qid": "uDZrl35yeZE", "task": "T4_visual_relation", "lambda": 0.8635309338569641, "pred": "D. on a sunny beach", "gold": "E", "correct": false}
+{"qid": "@movie.explained6-7275653401025826050", "task": "T4_visual_relation", "lambda": 0.7130433320999146, "pred": "B", "gold": "B", "correct": true}
+{"qid": "fPLjjr8w6DU", "task": "T4_visual_relation", "lambda": 0.5354244709014893, "pred": "B. A man in black swim tr", "gold": "B", "correct": true}
+{"qid": "@recipesbyanne-7190395053343296774", "task": "T4_visual_relation", "lambda": 0.6154894232749939, "pred": "B", "gold": "B", "correct": true}
+{"qid": "DRIpznER-VQ", "task": "T4_visual_relation", "lambda": 0.7356323599815369, "pred": "D", "gold": "B", "correct": false}
+{"qid": "kLuqCtnKr_8", "task": "T4_visual_relation", "lambda": 0.4327083230018616, "pred": "C", "gold": "C", "correct": true}
+{"qid": "uWBh0meTg08", "task": "T4_visual_relation", "lambda": 0.7252869009971619, "pred": "E", "gold": "A", "correct": false}
+{"qid": "p7YxwveUrjI", "task": "T4_visual_relation", "lambda": 0.8722532391548157, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@lisolna-7265337261737217312", "task": "T4_visual_relation", "lambda": 0.9583829045295715, "pred": "B", "gold": "B", "correct": true}
+{"qid": "I2Fyzav8MxE", "task": "T4_visual_relation", "lambda": 0.22991067171096802, "pred": "A", "gold": "A", "correct": true}
+{"qid": "8k6M0HD162k", "task": "T4_visual_relation", "lambda": 0.6094153523445129, "pred": "B. A rectangular box appears around the", "gold": "B", "correct": true}
+{"qid": "9WjElCiDpzM", "task": "T4_visual_relation", "lambda": 0.3508056402206421, "pred": "C", "gold": "C", "correct": true}
+{"qid": "6S_e34j6q9U", "task": "T4_visual_relation", "lambda": 0.4562157988548279, "pred": "C", "gold": "B", "correct": false}
+{"qid": "zTeDF7mQ88A", "task": "T4_visual_relation", "lambda": 0.3060268461704254, "pred": "A", "gold": "A", "correct": true}

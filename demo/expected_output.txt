@@ -1,0 +1,25 @@
+=== cached fields ===
+s_obj        shape=(41,)
+s_text       shape=(41,)
+q_emb        shape=(768,)
+gt_frames    shape=(1,)
+n_frames     shape=()  value=1007
+duration     shape=()  value=42.0
+category     shape=()  value=T2A
+
+GT in score-index space: [9.41]   tolerance = 4.88 steps (5 s)
+
+=== recall@8 vs lambda ===
+  lambda=0.0  recall@8=0.000
+  lambda=0.1  recall@8=0.000
+  lambda=0.2  recall@8=0.000
+  lambda=0.3  recall@8=0.000
+  lambda=0.4  recall@8=1.000
+  lambda=0.5  recall@8=1.000
+  lambda=0.6  recall@8=1.000
+  lambda=0.7  recall@8=1.000
+  lambda=0.8  recall@8=1.000
+  lambda=0.9  recall@8=1.000
+  lambda=1.0  recall@8=1.000
+
+oracle_lambda_idx = 5 -> lambda* = 0.5

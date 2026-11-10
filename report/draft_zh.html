@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>融合权重论文草稿</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* layout: single paper column (~70ch), figures at column width, editor notes in tinted side boxes */
+  --bg: #f4f5f7;
+  --paper: #ffffff;
+  --ink: #1d232c;
+  --muted: #5d6775;
+  --line: #dfe3e9;
+  --accent: #2c5f96;
+  --note-bg: #fff7e8;
+  --note-line: #e2b36a;
+  --font-display: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121519; --paper: #1a1f26; --ink: #e3e7ec; --muted: #9ba5b2; --line: #2c333d;
+    --accent: #86b3e3; --note-bg: #2b2418; --note-line: #9c7637; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121519; --paper: #1a1f26; --ink: #e3e7ec; --muted: #9ba5b2; --line: #2c333d;
+  --accent: #86b3e3; --note-bg: #2b2418; --note-line: #9c7637; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.85; }
+article { max-width: 860px; margin: 24px auto 80px; background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 44px 52px; display: grid; gap: 18px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.4; margin: 0; }
+h1 { font-size: 1.7rem; text-align: center; }
+h2 { font-size: 1.3rem; margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--line); }
+h3 { font-size: 1.06rem; margin-top: 6px; }
+p { margin: 0; text-align: justify; }
+.byline { text-align: center; color: var(--muted); font-size: .92rem; }
+.abstract { background: var(--bg); border-radius: 8px; padding: 16px 20px; display: grid; gap: 8px; }
+.abstract b:first-child { font-family: var(--font-display); }
+.note { background: var(--note-bg); border-left: 3px solid var(--note-line); border-radius: 6px; padding: 10px 14px; font-size: .9rem; color: var(--ink); }
+.note b { color: var(--ink); }
+figure { margin: 6px 0; display: grid; gap: 8px; }
+figure img { width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 6px; }
+figcaption { font-size: .9rem; color: var(--muted); }
+figcaption b { color: var(--ink); }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; font-variant-numeric: tabular-nums; }
+caption { caption-side: top; text-align: left; font-size: .9rem; color: var(--muted); padding-bottom: 6px; }
+caption b { color: var(--ink); }
+th, td { padding: 5px 9px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; }
+thead th { border-bottom: 1.5px solid var(--ink); font-weight: 500; }
+tbody tr:last-child td { border-bottom: 1.5px solid var(--ink); }
+tr.sep td { border-top: 1.5px solid var(--line); }
+tr.hl td { font-weight: 700; }
+td.l { text-align: left; white-space: normal; }
+ol, ul { margin: 0; padding-left: 1.4em; display: grid; gap: 6px; }
+.eq { font-family: "Cambria Math", "Times New Roman", serif; font-size: 1.05rem; text-align: center; padding: 4px 0; overflow-x: auto; }
+.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; }
+.flow .box { flex: 1 1 130px; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: var(--bg); font-size: .85rem; line-height: 1.5; }
+.flow .box b { display: block; color: var(--accent); }
+.flow .arrow { align-self: center; color: var(--muted); }
+.refs { font-size: .86rem; line-height: 1.6; }
+.refs li { text-align: left; }
+.tag { font-size: .78rem; color: var(--muted); }
+code { font-size: .86em; background: var(--bg); padding: 1px 4px; border-radius: 4px; }
+@media (max-width: 640px) { article { margin: 0; border-radius: 0; border-left: 0; border-right: 0; padding: 22px 16px; } h1 { font-size: 1.35rem; } }
+</style>
+</head>
+<body>
+<article>
+
+<div class="note"><b>给你看的说明（正式稿删掉）：</b>这是偏分析路线的中文草稿，结构按 CVPR 正文 8 页排：图表编号就是论文里的编号，附录单独编号。黄色框是给你的编辑备注。参考文献先用作者加年份占位，转 LaTeX 时逐条核对。每节标题后的“约 x 页”是篇幅预算。</div>
+
+<h1>融合权重该不该随问题而变？<br>字幕感知关键帧搜索中持续学习融合权重的实证分析</h1>
+<p class="byline">英文标题备选：Should the Fusion Weight Adapt? An Empirical Study of Continually Learned Fusion Weights for Subtitle-Aware Keyframe Search</p>
+
+<div class="abstract">
+  <p><b>摘要</b>　长视频问答通常先挑出少量关键帧再交给多模态大模型。VSI 这类方法同时利用画面中的目标检测分数和字幕的文本相似度，并用一个固定权重 λ 把两者相加。我们研究这个权重是否应当随问题类型变化，以及能否在问题类型依次到来时，用持续学习的方式学到它。我们在 LongVideoBench 上按问题类型构造了 4 个任务的持续学习基准，比较 6 种持续学习策略和 4 类常数参照，每个设置跑 3 种任务顺序 × 3 个随机种子。我们发现：（1）最佳 λ 与问题类型显著相关，文本类问题的最佳 λ 均值为 0.62，视觉类为 0.49（p = 1.6×10⁻⁶）；（2）持续学习得到的预测头比 VSI 默认的 λ=0.3 高 4 到 5 个点、9 次运行全部更好，但只与在训练集上调好的单一常数持平（+0.6），并低于每个任务各用一个常数；（3）原因是预测头对不同任务输出几乎相同的 λ，可提升空间的大部分（8.9 个点）来自逐题差异，而 62% 的问题对 λ 完全不敏感；（4）选帧召回率的提升几乎没有带来下游问答的提升，只有在对 λ 敏感的问题上，最优 λ 才能多答对 5 个点。我们还整理了 4 个会让结论反转的实现陷阱。这些结果说明，对这类融合权重，先调好一个全局常数是必要的基线，而真正的瓶颈是从稀疏监督中预测逐题差异。</p>
+</div>
+
+<h2>1　引言 <span class="tag">约 1 页</span></h2>
+<p>长视频动辄几十分钟，多模态大模型一次只能看有限的几帧，所以“看哪几帧”直接决定能否答对。近期的关键帧搜索方法根据问题在视频里定位相关帧 [T* 2025; AKS 2025; BOLT 2025]。VSI [VSI 2026] 在此基础上加入字幕：它对每一秒同时计算一个视觉分数（问题提到的物体是否出现，由 YOLO-World [Cheng 2024] 检测）和一个字幕分数（这一秒的字幕与问题的语义相似度），归一化后按 (1−λ)·视觉 + λ·字幕 融合，取最高的 k 帧。</p>
+<p>VSI 对所有问题使用同一个 λ=0.3。直觉上这并不合理：问“屏幕上出现了什么字幕”的问题应更依赖字幕，问“穿红衣服的人在做什么”的问题应更依赖画面。如果 λ 应当随问题变化，一个自然的做法是训练一个轻量的预测器，根据问题和分数曲线输出 λ。实际系统中问题类型往往是陆续出现的，预测器需要在学习新类型的同时保留旧类型上的能力，这正是持续学习研究的场景 [De Lange 2021; Wang 2024]。</p>
+<p>本文围绕四个研究问题展开：</p>
+<ol>
+  <li><b>RQ1</b>　最佳 λ 是否真的随问题类型变化？可提升的空间有多大、在哪里？</li>
+  <li><b>RQ2</b>　按任务顺序持续训练的 λ 预测头能否学到它？会不会遗忘？</li>
+  <li><b>RQ3</b>　如果学到的效果有限，瓶颈在哪里？</li>
+  <li><b>RQ4</b>　选帧召回率的提升能否转化为下游问答的提升？</li>
+</ol>
+<p>我们的贡献如下。第一，我们把 VSI 的融合权重形式化为一个持续学习问题，在 LongVideoBench [Wu 2024] 上构建了按问题类型划分的 4 任务基准，并给出包括“训练集调好的单一常数”和“每任务常数”在内的公平参照。第二，我们证实最佳 λ 与问题类型显著相关，并把可提升空间分解为全局偏移、任务差异和逐题差异三部分（图 4）。第三，我们发现持续学习预测头虽然稳定优于默认权重，却只与调好的常数持平，原因是它退化为一个与任务无关的 λ（图 6）。第四，我们给出下游问答证据：只有约 38% 对 λ 敏感的问题能从更好的 λ 中受益。最后，我们记录了 4 个会让结论反转的实现陷阱，供后续工作参考（附录 A）。</p>
+<figure>
+  <div class="flow" aria-label="方法示意">
+    <div class="box"><b>问题 + 长视频</b>每秒采样一帧</div><div class="arrow">→</div>
+    <div class="box"><b>视觉分支</b>YOLO-World 检测问题中的物体 → s_obj</div>
+    <div class="box"><b>字幕分支</b>句向量相似度 → s_text</div><div class="arrow">→</div>
+    <div class="box"><b>λ 预测头</b>54 维曲线特征 → 11 档 λ 的分布，按任务顺序持续训练</div><div class="arrow">→</div>
+    <div class="box"><b>融合 + top-8</b>(1−λ)·ŝ_obj + λ·ŝ_text</div><div class="arrow">→</div>
+    <div class="box"><b>VLM 答题</b>8 帧 + 对应字幕</div>
+  </div>
+  <figcaption><b>图 1</b>　研究对象示意。VSI 用固定 λ 融合两条分数曲线；我们研究让一个轻量预测头逐题输出 λ，并在问题类型依次到来时持续训练。</figcaption>
+</figure>
+<div class="note">图 1 在 LaTeX 阶段画成矢量示意图（放一个视频帧条、两条分数曲线和融合后的 top-8 标记），这里先用文字框代替。</div>
+
+<h2>2　相关工作 <span class="tag">约 0.6 页</span></h2>
+<p><b>长视频关键帧选择。</b>均匀采样会漏掉与问题相关的短暂片段。T* [Ye 2025] 把关键帧选择看作时间搜索，用目标检测迭代缩小搜索范围；AKS [Tang 2025] 和 BOLT [Liu 2025] 在不训练大模型的前提下按问题相关性自适应采样。VSI [VSI 2026] 在 T* 的视觉搜索上加入字幕分支，用固定权重融合。这些方法的融合或采样超参数通常全局固定，我们关注的是这个权重本身是否应随问题变化。</p>
+<p><b>多模态融合权重。</b>动态融合方法根据输入调整各模态的贡献 [Xue 2023]。与端到端训练的融合网络不同，VSI 的两个分支都是现成模型，可学习的部分只有一个标量 λ，这让我们可以精确地衡量“学习 λ”能带来多少收益。</p>
+<p><b>持续学习。</b>经典方法分为正则化（EWC [Kirkpatrick 2017]）、知识蒸馏（LwF [Li 2016]）和样本回放（ER [Chaudhry 2019]）三类，常用平均准确率和遗忘量衡量 [Lopez-Paz 2017; Chaudhry 2018]。已有工作大多研究分类或检测这类输出空间很大的任务；我们研究的是一个只有一个标量输出、监督信号稀疏的场景，这让“学到了什么、忘掉了什么”可以被直接观察（图 6）。</p>
+
+<h2>3　问题设置 <span class="tag">约 1.2 页</span></h2>
+<h3>3.1　融合与评测</h3>
+<p>对一个视频，VSI 的两个分支给出按秒索引的分数曲线 s<sub>obj</sub> 和 s<sub>text</sub>。分别做 min-max 归一化后，融合分数为：</p>
+<p class="eq">S<sub>λ</sub>(t) = (1 − λ) · ŝ<sub>obj</sub>(t) + λ · ŝ<sub>text</sub>(t)，　λ ∈ {0, 0.1, …, 1}</p>
+<p>取 S<sub>λ</sub> 最高的 k = 8 秒作为关键帧。评测指标为 recall@8：GT 关键帧中有多少落在某个选中帧的 ±5 秒内。</p>
+<div class="note">VSI 原文和代码文档写的是 Z-score 归一化，但代码实际用的是 min-max；这里按代码写，论文里要以此为准。</div>
+<h3>3.2　数据与任务</h3>
+<p>我们使用 LongVideoBench [Wu 2024] 验证集，每个视频取一道题，共 753 题。按官方问题类别把它们归为 4 个任务：T1 文本感知（127 题）、T2 视觉感知（237）、T3 文本关系（171）、T4 视觉关系（218）。每个任务内部按 7:3 随机划分训练和测试，用 3 个随机种子。任务顺序有 3 种：默认 T1→T2→T3→T4，分组 T1→T3→T2→T4，随机 T3→T1→T2→T4。每个设置共 3 × 3 = 9 次运行。两条分数曲线预先计算并缓存。</p>
+<h3>3.3　λ 预测头</h3>
+<p>预测头是一个两层 MLP（54 → 128 → 11，ReLU，dropout 0.1），输出 11 档 λ 上的概率分布 p，实际使用的 λ 是加权平均 λ̄ = Σ<sub>b</sub> p<sub>b</sub> λ<sub>b</sub>。输入是 54 维特征，全部由两条分数曲线计算、不使用任何标注：10 个曲线统计量，加上 44 维逐题特征，分为四组：每条曲线的形状、两条曲线的一致性、top-8 随 λ 变化的程度、不同 λ 所选帧之间的共识。特征用第一个任务训练集的均值和方差标准化，避免泄露后续任务的信息。</p>
+<p>由于每题平均只有约 2 个 GT 帧，按 λ 得到的召回率只取少数几个离散值，“每题最佳 λ”作为分类标签几乎没有信息。因此我们直接优化融合曲线（soft top-k 损失）：</p>
+<p class="eq">ℒ = − log Σ<sub>t ∈ GT</sub> softmax( S<sub>λ̄</sub> / τ )<sub>t</sub>，　τ = 0.1</p>
+<p>即让 GT 帧在融合分数中排得更靠前。每个任务训练 50 轮，Adam，学习率 10⁻³，batch 64。</p>
+<h3>3.4　持续学习策略与参照</h3>
+<p>策略：naive（直接在新任务上继续训练）；EWC [Kirkpatrick 2017]（λ<sub>EWC</sub> = 400）；LwF [Li 2016]（蒸馏温度 2，权重 1）；ER [Chaudhry 2019]（回放缓存 200 题）；joint（每到一个新任务就在所有已见任务上重新训练，作为持续学习的参考上限）；kNN（保存所有已见样本，取特征空间最近 5 题的最佳 λ 投票）。</p>
+<p>参照：VSI 默认的固定 λ=0.3；在训练集上调好的单一常数（对所有任务训练集的平均召回率取最优，实际多为 0.7）；每任务一个常数（各自在该任务训练集上调，需要知道题目类型）；逐题 oracle（每题取测试召回率最高的 λ，作为天花板）。</p>
+<p>指标：设 R<sub>i,j</sub> 为学完第 i 个任务后在任务 j 测试集上的召回率，T = 4。平均准确率 ACC = (1/T) Σ<sub>j</sub> R<sub>T,j</sub>；遗忘量 FM = (1/(T−1)) Σ<sub>j&lt;T</sub> [ max<sub>i&lt;T</sub> R<sub>i,j</sub> − R<sub>T,j</sub> ]，越小越好。</p>
+<div class="note">附录 A 的 4 个陷阱里，“GT 帧号按 24 fps 换算”和“训练与评测取 λ 的方式要一致”两条必须在 3.1 或 3.3 用一句话交代，否则别人复现会得到完全不同的数字。</div>
+
+<h2>4　RQ1：λ 应该随问题变吗？<span class="tag">约 1 页</span></h2>
+<p><b>不同任务的最佳常数差别很大。</b>图 2(a) 画出各任务的召回率随常数 λ 的变化。两个文本类任务在 λ = 0.8 到 0.9 达到最高，两个视觉类任务在 λ ≤ 0.3 最高。差异在 T1 上最明显：λ 从默认的 0.3 调到 0.8，召回率从 0.73 升到 0.88。全部 753 题上，最佳单一常数是 0.7（0.617），比默认的 0.3（0.588）高约 3 个点，说明 VSI 的默认值在这个数据上偏低。</p>
+<figure>
+  <img src="figs/f02_headroom.png" alt="各任务召回率随 λ 变化曲线与 λ 不敏感题目占比" loading="lazy">
+  <figcaption><b>图 2</b>　(a) 各任务及全部问题的 recall@8 随常数 λ 的变化。文本类任务（蓝）偏好大 λ，视觉类任务（橙）偏好小 λ。(b) 各任务中换任何 λ 召回率都不变的问题占比。</figcaption>
+</figure>
+<p><b>逐题看也一样。</b>只看对 λ 敏感的 284 题，取每题最优 λ 集合的中心（图 3）：文本类均值 0.62，视觉类 0.49，单侧 Mann-Whitney 检验 p = 1.6×10⁻⁶。</p>
+<figure>
+  <img src="figs/f03_premise.png" alt="文本类与视觉类问题最佳 λ 分布直方图" loading="lazy">
+  <figcaption><b>图 3</b>　对 λ 敏感问题的逐题最佳 λ 分布。</figcaption>
+</figure>
+<div class="note">图 2 和图 3 讲的是同一件事，8 页放不下时可以只留图 2，把图 3 的检验结果写进正文一句话。</div>
+<p><b>可提升空间在哪里。</b>图 4 把 ACC 从默认值到天花板的差距分成三段：把全局 λ 从 0.3 调到训练集最优，得到 +4.5；再允许每个任务一个常数，只多 +1.4；而逐题 oracle 还能再多 +8.9。同时，有 53% 到 74% 的问题对 λ 完全不敏感（图 2(b)）。也就是说，任务层面的差异统计上很显著，但它带来的召回率收益不大；大部分空间在逐题差异里，而这部分监督非常稀疏。</p>
+<figure>
+  <img src="figs/f16_decomp.png" alt="从默认 λ 到逐题 oracle 的可提升空间分解瀑布图" loading="lazy">
+  <figcaption><b>图 4</b>　可提升空间分解（持续学习评测口径，9 次运行平均）。虚线为两个持续学习预测头的最终 ACC。</figcaption>
+</figure>
+
+<h2>5　RQ2 与 RQ3：持续学习能学到多少？<span class="tag">约 1.6 页</span></h2>
+<p><b>主结果。</b>表 1 给出 9 次运行的平均。所有学习方法都比默认 λ=0.3 高 3.9 到 5.2 个点，9 次运行无一例外（图 5(a)）。但与训练集上调好的单一常数（0.662）相比，只有 LwF 和 joint 略高（各 +0.6，分别 7/9 和 6/9 次更好），naive、EWC、ER 与之持平或略低，kNN 低 1.7 个点。没有任何方法达到每任务常数（0.677），离逐题 oracle（0.765）差约 10 个点。</p>
+<div class="tbl">
+<table>
+  <caption><b>表 1</b>　持续学习主结果（修正后 GT，3 种顺序 × 3 个种子）。“对调好常数”为 ACC 差（百分点）及 9 次中更好的次数。</caption>
+  <thead><tr><th>方法</th><th>ACC ↑</th><th>FM ↓</th><th>对 λ=0.3</th><th>对调好常数</th></tr></thead>
+  <tbody>
+    <tr><td>固定 λ=0.3（VSI）</td><td>0.617</td><td>0</td><td>—</td><td>—</td></tr>
+    <tr><td>调好的单一常数</td><td>0.662</td><td>0</td><td>+4.5</td><td>—</td></tr>
+    <tr><td>每任务常数 †</td><td>0.677</td><td>0</td><td>+6.0</td><td>+1.4</td></tr>
+    <tr><td>逐题 oracle ‡</td><td>0.765</td><td>0</td><td>+14.8</td><td>+10.3</td></tr>
+    <tr class="sep"><td>naive</td><td>0.656 ± 0.013</td><td>0.029 ± 0.020</td><td>+3.9</td><td>−0.7（3/9）</td></tr>
+    <tr><td>EWC</td><td>0.662 ± 0.011</td><td>0.023 ± 0.019</td><td>+4.5</td><td>−0.1（4/9）</td></tr>
+    <tr class="hl"><td>LwF</td><td>0.668 ± 0.009</td><td>0.015 ± 0.016</td><td>+5.1</td><td>+0.6（7/9）</td></tr>
+    <tr><td>ER</td><td>0.660 ± 0.007</td><td>0.021 ± 0.013</td><td>+4.3</td><td>−0.3（4/9）</td></tr>
+    <tr><td>joint（参考上限）</td><td>0.668 ± 0.007</td><td>0.015 ± 0.009</td><td>+5.2</td><td>+0.6（6/9）</td></tr>
+    <tr><td>kNN</td><td>0.645 ± 0.010</td><td>0.005 ± 0.006</td><td>+2.9</td><td>−1.7（0/9）</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tag">† 需要已知题目类型。‡ 使用测试集 GT，仅作天花板。</p>
+<figure>
+  <img src="figs/f10_paired.png" alt="每次运行相对 λ=0.3 与相对调好常数的 ACC 提升" loading="lazy">
+  <figcaption><b>图 5</b>　逐次配对比较，每个点是一种顺序 × 一个种子，上方数字为 9 次中更好的次数。(a) 相对默认 λ=0.3；(b) 相对调好的单一常数。</figcaption>
+</figure>
+<div class="note">表 1 和图 5 有重叠，8 页紧张时图 5 可以只留 (b) 或移到附录。</div>
+<p><b>遗忘。</b>LwF 和 joint 的遗忘量约为 naive 的一半（0.015 对 0.029），EWC 和 ER 介于两者之间。但这一差异只在 6 到 7 次运行中成立，标准差与差值相当，我们只能说防遗忘方法有减少遗忘的趋势。遗忘本身也很小，原因见下一段。</p>
+<p><b>RQ3：预测头学到的是一个与任务无关的 λ。</b>图 6 画出每学完一个任务后，预测头在 4 个任务上输出的平均 λ。4 条曲线几乎重合：预测头并没有给文本类任务更大的 λ、给视觉类任务更小的 λ，而是把所有问题整体推到 0.6 左右，接近调好的全局常数 0.7。这解释了表 1 的现象：预测头拿到了图 4 中“全局偏移”那一段，但没有拿到“任务差异”那一段。它也解释了遗忘为什么小：不同任务学到的 λ 本来就接近，相互冲突不大。naive 在学完 T2（视觉感知）后整体 λ 掉到 0.55，学完 T3 又回升，LwF 的波动明显更小，这是遗忘最直观的体现。</p>
+<figure>
+  <img src="figs/f12_lambda_rounds.png" alt="每学完一个任务后各任务平均预测 λ 的折线图" loading="lazy">
+  <figcaption><b>图 6</b>　每学完一个任务后，预测头在各任务测试集上的平均预测 λ（默认顺序，3 个种子平均）。右侧三角为各任务的最佳常数。</figcaption>
+</figure>
+<p><b>为什么学不到任务差异。</b>我们认为有两个原因。第一，监督稀疏：62% 的问题对 λ 完全不敏感，这些问题对损失函数几乎没有偏好，梯度主要来自少数敏感问题。第二，输入里没有显式的任务信息：预测头只看分数曲线的统计特征，而这些特征在不同任务之间分布相近。附录 B 的特征消融也支持这一点：加入 768 维的问题文本向量反而降低测试召回率，说明在这么小的数据上，高维语义特征会过拟合。</p>
+<div class="note">这一段是分析路线的核心论点。如果你想增强说服力，可以补一个很便宜的实验：把任务编号（one-hot）作为额外输入，看预测头能否追上每任务常数。CPU 上几分钟就能跑完；无论结果如何都能写进来。要我跑的话告诉我。</div>
+
+<h2>6　RQ4：选帧更好，答题会更好吗？<span class="tag">约 1 页</span></h2>
+<p><b>设置。</b>把每种方法选出的 8 帧，连同每帧时刻的字幕，交给 Qwen3-VL-8B-Instruct [Qwen 2025] 回答多选题，比较正确率。学出来的预测头只在它自己种子的测试题上评估（每个种子 229 题），并与固定 λ 在同一批题上做配对比较。</p>
+<div class="tbl">
+<table>
+  <caption><b>表 2</b>　下游问答正确率。上半部分为全部 753 题；下半部分为预测头所在测试集（3 × 229 题）上的配对比较。</caption>
+  <thead><tr><th>选帧方式</th><th>正确率</th><th>对 λ=0.3（配对）</th></tr></thead>
+  <tbody>
+    <tr><td>均匀采样</td><td>0.615</td><td></td></tr>
+    <tr><td>λ = 0（只看画面）</td><td>0.604</td><td></td></tr>
+    <tr><td>λ = 0.3（VSI 默认）</td><td>0.631</td><td></td></tr>
+    <tr><td>λ = 0.7（召回率最高的常数）</td><td>0.627</td><td></td></tr>
+    <tr><td>λ = 1（只看字幕）</td><td>0.615</td><td></td></tr>
+    <tr><td>逐题 oracle λ</td><td>0.649</td><td></td></tr>
+    <tr class="sep"><td>固定 λ=0.3</td><td>0.648</td><td>—</td></tr>
+    <tr class="hl"><td>LwF 预测头</td><td>0.652</td><td>+0.4　[−1.5, +2.3]　p = 0.77</td></tr>
+    <tr><td>naive 预测头</td><td>0.643</td><td>−0.4　[−2.3, +1.5]　p = 0.76</td></tr>
+    <tr><td>逐题 oracle λ</td><td>0.658</td><td>+1.0</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tag">方括号为 bootstrap 95% 置信区间，p 为精确 McNemar 检验。</p>
+<p><b>结果。</b>在全部问题上，学到的 λ 与默认 λ 打平，即使逐题 oracle 也只多 1.8 个点。召回率最高的 λ=0.7 问答正确率反而略低于 0.3，说明 recall@8 只是答题效果的粗略代理。</p>
+<p><b>λ 只对少数问题重要。</b>图 7(a) 显示，命中 GT 关键帧确实影响答题：λ=0.3 时，8 帧一个 GT 都没命中的问题正确率为 0.49，全部命中的为 0.75。但图 7(b) 把问题分成两组后可以看到，在 469 道对 λ 不敏感的问题上，所有基于 λ 的方法正确率相同；只在 284 道敏感问题上，逐题 oracle 比默认值多答对 5 个点（0.673 对 0.623）。LwF 预测头在其中 266 道测试题上高 1.5 个点，但置信区间 [−2.3, +5.6] 仍跨过 0。也就是说，λ 对答题有作用，但只作用于约 38% 的问题，而现有预测头只抓住了这部分作用的一小块。</p>
+<figure>
+  <img src="figs/f15_qa_recall.png" alt="按召回率分组的问答正确率，以及 λ 敏感与不敏感问题上各方法的正确率" loading="lazy">
+  <figcaption><b>图 7</b>　(a) λ=0.3 时按 recall@8 分组的问答正确率。(b) 对 λ 敏感与不敏感问题上各选帧方式的问答正确率。</figcaption>
+</figure>
+
+<h2>7　讨论 <span class="tag">约 0.4 页</span></h2>
+<p><b>对实践的建议。</b>对于 VSI 这类用固定权重融合两个现成分支的方法，第一步应该是在目标数据上调好全局权重，这一步就拿到了大部分收益；任何“学习权重”的方法都应该以调好的常数而不是论文默认值作为基线，否则会高估学习的作用。</p>
+<p><b>持续学习在这里的意义。</b>当可学习部分只是一个标量时，任务之间的冲突很小，遗忘也小，持续学习方法之间的差别有限。真正需要解决的是逐题差异的预测问题，这更像一个在稀疏、噪声监督下的回归问题，而不是遗忘问题。</p>
+<p><b>局限。</b>每个视频只用一道题，测试集每个种子只有约 229 题，下游问答的统计功效有限；recall@8 在每题约 2 个 GT 帧时非常粗糙；只使用了一个 VLM 和一个数据集；任务流只有 4 个任务。</p>
+
+<h2>8　结论 <span class="tag">约 0.2 页</span></h2>
+<p>我们研究了字幕感知关键帧搜索中的融合权重 λ 是否应当随问题变化、能否被持续学习。最佳 λ 与问题类型显著相关，但持续学习得到的预测头退化为一个与任务无关的权重，只能追平调好的常数，下游问答的收益也只出现在少数对 λ 敏感的问题上。可提升空间主要来自逐题差异，从稀疏监督中预测这种差异是后续工作的关键。</p>
+
+<h2>参考文献（占位，转 LaTeX 时逐条核对）</h2>
+<ol class="refs">
+  <li>[VSI 2026] Visual–Subtitle Integration for Keyframe Selection. CVPR Findings, 2026.（作者待补）</li>
+  <li>[Ye 2025 / T*] Re-thinking Temporal Search for Long-Form Video Understanding. CVPR, 2025.</li>
+  <li>[Tang 2025 / AKS] Adaptive Keyframe Sampling for Long Video Understanding. CVPR, 2025.</li>
+  <li>[Liu 2025 / BOLT] BOLT: Boost Large VLMs without Training for Long-form Video Understanding. CVPR, 2025.</li>
+  <li>[Wu 2024] LongVideoBench: A Benchmark for Long-context Interleaved Video-Language Understanding. NeurIPS Datasets and Benchmarks, 2024.</li>
+  <li>[Cheng 2024] YOLO-World: Real-Time Open-Vocabulary Object Detection. CVPR, 2024.</li>
+  <li>[Reimers 2019] Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks. EMNLP, 2019.</li>
+  <li>[Xue 2023] Dynamic Multimodal Fusion. CVPR Workshops, 2023.</li>
+  <li>[Kirkpatrick 2017] Overcoming Catastrophic Forgetting in Neural Networks. PNAS, 2017.</li>
+  <li>[Li 2016] Learning without Forgetting. ECCV, 2016.</li>
+  <li>[Chaudhry 2019] On Tiny Episodic Memories in Continual Learning. arXiv, 2019.</li>
+  <li>[Lopez-Paz 2017] Gradient Episodic Memory for Continual Learning. NeurIPS, 2017.</li>
+  <li>[Chaudhry 2018] Riemannian Walk for Incremental Learning: Understanding Forgetting and Intransigence. ECCV, 2018.</li>
+  <li>[De Lange 2021] A Continual Learning Survey: Defying Forgetting in Classification Tasks. TPAMI, 2021.</li>
+  <li>[Wang 2024] A Comprehensive Survey of Continual Learning: Theory, Method and Application. TPAMI, 2024.</li>
+  <li>[Qwen 2025] Qwen3-VL Technical Report. 2025.（待核实）</li>
+</ol>
+
+<h2>附录</h2>
+<h3>A　四个会让结论反转的实现陷阱</h3>
+<div class="tbl">
+<table>
+  <caption><b>表 A1</b>　实验过程中发现并修正的问题。每一个都能让实验正常跑完，但给出错误结论。</caption>
+  <thead><tr><th>问题</th><th>症状</th><th>修正</th></tr></thead>
+  <tbody>
+    <tr><td>GT 与分数不在同一坐标</td><td class="l">GT 是帧号，分数按秒索引；直接比较时 94% 的问题召回率恒为 0</td><td class="l">统一换算到秒</td></tr>
+    <tr><td>GT 帧率</td><td class="l">LongVideoBench 的 GT 按固定 24 fps 计帧，而视频真实帧率中位数为 30；按真实帧率换算会让 GT 时间整体偏早。用答案字幕的时间验证：24 fps 下 38/39 的 GT 落在 5 秒内，真实帧率下只有 14/39</td><td class="l">固定按 24 fps 换算</td></tr>
+    <tr><td>短视频被静默丢弃</td><td class="l">VSI 把帧拼成 4×4 网格，16 秒以内的视频报错跳过，丢失 197 题且偏向文本类任务</td><td class="l">自适应缩小网格</td></tr>
+    <tr><td>训练与评测取 λ 不一致</td><td class="l">训练优化加权平均 λ，评测取概率最大的档位；模型把概率分在 0 和 1 两端，评测落到最差的两个极端，学到的 λ 比固定值低 3 到 5 个点</td><td class="l">评测也用加权平均</td></tr>
+  </tbody>
+</table>
+</div>
+<figure>
+  <img src="figs/f08_gtfix.png" alt="GT 帧率验证与修正前后常数 λ 曲线" loading="lazy">
+  <figcaption><b>图 A1</b>　(a) 两种帧率假设下 GT 与答案字幕时间的吻合程度；(b) 修正前后的常数 λ 曲线。</figcaption>
+</figure>
+<figure>
+  <img src="figs/f05_decode.png" alt="解码方式修正前后对比" loading="lazy">
+  <figcaption><b>图 A2</b>　(a) 修正评测解码方式前后的持续学习 ACC（旧 GT）；(b) 同一预测头在两种解码方式下的预测 λ 分布。</figcaption>
+</figure>
+<h3>B　输入特征消融（旧 GT）</h3>
+<figure>
+  <img src="figs/f07_features.png" alt="不同输入特征组合的测试召回率" loading="lazy">
+  <figcaption><b>图 B1</b>　所有任务一起训练时，不同输入特征下预测头的测试召回率（3 次划分均值 ± 标准差）。</figcaption>
+</figure>
+<div class="tbl">
+<table>
+  <caption><b>表 B1</b>　旧 GT 下逐题特征的持续学习结果（作为消融；数值与表 1 不可直接比较）。</caption>
+  <thead><tr><th>方法</th><th>原特征 ACC</th><th>+ 逐题特征 ACC</th><th>FM</th><th>对调好常数</th></tr></thead>
+  <tbody>
+    <tr><td>naive</td><td>0.560</td><td>0.578</td><td>0.028</td><td>+0.5（7/9）</td></tr>
+    <tr><td>EWC</td><td>0.568</td><td>0.587</td><td>0.017</td><td>+1.3（9/9）</td></tr>
+    <tr><td>LwF</td><td>0.567</td><td>0.589</td><td>0.016</td><td>+1.5（8/9）</td></tr>
+    <tr><td>ER</td><td>0.565</td><td>0.585</td><td>0.019</td><td>+1.1（8/9）</td></tr>
+    <tr><td>joint</td><td>0.575</td><td>0.589</td><td>0.018</td><td>+1.5（9/9）</td></tr>
+    <tr class="sep"><td>λ=0.3 / 调好常数 / 每任务常数 / oracle</td><td colspan="4">0.564 / 0.574 / 0.584 / 0.673</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="note">表 B1 有一个值得在正文讨论里提一句的现象：旧 GT 下逐题特征让预测头比调好的常数高 1.5 个点，修正 GT 后缩小到 0.6。可能的解释是修正后全局偏移变大，掩盖了逐题部分；但也可能旧 GT 下的“逐题收益”部分来自噪声标注。写的时候建议措辞保守。</div>
+<h3>C　其他结果</h3>
+<figure>
+  <img src="figs/f09_v4_main.png" alt="v4 主结果柱状图" loading="lazy">
+  <figcaption><b>图 C1</b>　表 1 的柱状图版本：(a) ACC 与参照水平；(b) 遗忘量。</figcaption>
+</figure>
+<figure>
+  <img src="figs/f11_matrix.png" alt="召回率矩阵热力图" loading="lazy">
+  <figcaption><b>图 C2</b>　naive、LwF、joint 的召回率矩阵（默认顺序，3 个种子平均）。</figcaption>
+</figure>
+<figure>
+  <img src="figs/f14_qa.png" alt="下游问答按任务拆分" loading="lazy">
+  <figcaption><b>图 C3</b>　下游问答正确率：(a) 全部问题；(b) 按任务拆分。</figcaption>
+</figure>
+<h3>D　实现细节</h3>
+<ul>
+  <li>分数缓存：VSI 官方实现，text_weight 0.3 时的两分支原始分数，每秒一个值；YOLO-World-S 权重；字幕分支句向量模型 all-mpnet-base-v2。</li>
+  <li>44 维逐题特征：每条曲线 8 维（零值比例、是否常数、均值、标准差、top-8 质量占比、top-8 时间分散度、峰数的对数、第 8 与第 9 名的分差）× 2；跨分支 4 维（Pearson、Spearman、top-8 与 top-32 在 ±5 秒内的重合率）；λ 敏感度 12 维（11 个 λ 下 top-8 与 λ=0.3 的重合率，以及不同 top-8 集合的数量）；共识 12 维。</li>
+  <li>下游问答：Qwen3-VL-8B-Instruct，bf16，每帧最多 448×448 像素，贪心解码，最多 8 个新 token；字幕按每帧时刻 ±1 秒取，片段视频减去字幕起始偏移。</li>
+  <li>代码与全部结果：github.com/Jacksonha7/continual-vsi（私有），图由 <code>report/make_figures.py</code> 生成。</li>
+</ul>
+
+</article>
+</body>
+</html>

@@ -1,0 +1,34 @@
+tasks:
+  T1_text_perception:
+    - T2E  # text-referred event
+    - T2O  # text-referred object
+    - T2A  # text-referred attribute
+  T2_visual_perception:
+    - S2E  # scene-to-event
+    - S2O  # scene-to-object
+    - S2A  # scene-to-attribute
+    - E2O  # event-to-object
+    - O2E  # object-to-event
+  T3_text_relation:
+    - TOS  # text-referred object sequence
+    - TAA  # text-referred attribute association
+    - T3E  # text-referred triple-event
+    - T3O  # text-referred triple-object
+  T4_visual_relation:
+    - SSS  # scene-scene-scene
+    - SOS  # scene-object-scene
+    - SAA  # scene-attribute-association
+    - E3E  # event-triple-event
+    - O3O  # object-triple-object
+
+orders:
+  default: [T1_text_perception, T2_visual_perception, T3_text_relation, T4_visual_relation]
+  grouped: [T1_text_perception, T3_text_relation, T2_visual_perception, T4_visual_relation]
+  random_seed0: shuffle
+
+split:
+  train: 0.7
+  test: 0.3
+  seed: 0
+
+lambda_bins: 11  # 0.0, 0.1, ..., 1.0

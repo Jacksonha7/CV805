@@ -1,0 +1,3 @@
+MBZUAI Beamer theme copied from https://github.com/MicDZ/MBZUAI_Beamer_Theme
+commit bd9659e (2026-10-02), MIT license (see LICENSE)
+Local change: removed the RCL lab logo from the frame title (beamerouterthemeMBZUAI.sty); only the MBZUAI logo is shown.

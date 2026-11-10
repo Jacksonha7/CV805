@@ -1,0 +1,753 @@
+{"qid": "-0aM99dMu_4", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "-An3wZyoYe0", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "-PnG8Jp2gFw", "task": "T1_text_perception", "lambda": 0.0, "pred": "E. The man pointed at the screen", "gold": "A", "correct": false}
+{"qid": "-QSAotqKqX8", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. 2 women", "gold": "D", "correct": false}
+{"qid": "-Xg2-SUq6wo", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. watch", "gold": "A", "correct": true}
+{"qid": "-eRimFrm6kQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "-iCLYpeghJs", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "-if_Wg43vTk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "-kaF6SnSEo8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "0WEnmqVVbHo", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. The man wearing a blue short", "gold": "C", "correct": false}
+{"qid": "0_YDrJoUe8s", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "0ln2qdCR5lA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. Leave", "gold": "B", "correct": false}
+{"qid": "0mEN5Jf2hU0", "task": "T3_text_relation", "lambda": 0.0, "pred": "C. Extends two fingers", "gold": "C", "correct": true}
+{"qid": "0oALTLKRWBA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided frames or subtitles describe", "gold": "D", "correct": false}
+{"qid": "0rWA-p4p5IM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. On a silver plate", "gold": "C", "correct": true}
+{"qid": "0t1vtW0cT1E", "task": "T1_text_perception", "lambda": 0.0, "pred": "D. Pointing at the mirror with", "gold": "D", "correct": true}
+{"qid": "0up5NxTiGZE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "14ot4DrXdds", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "18rZLZqg6C8", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "1D9TgBrW6Sw", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "1IpgyV9u5nE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "1R5uPaL0V-0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. sweater", "gold": "A", "correct": false}
+{"qid": "1oL4ugMdDvQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "1pxrIj9Xyps", "task": "T3_text_relation", "lambda": 0.0, "pred": "D. Looked up", "gold": "C", "correct": false}
+{"qid": "1vvYsirvA2I", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "22iOyzE8Ec0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "2F7d7aUCmUU", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "2Uh_KNmsoqI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "2W2ZkYARds4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "2edlqFUTDVc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "2ekjGl8yWZk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "2vVQo_GMA70", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "2zZSMnGLGao", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "3JzhP8qfbqE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "3Qv2K_0GEE0", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. yes", "gold": "C", "correct": false}
+{"qid": "3ZRVpYPFOl0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "3avWNHoEDAg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "3b_v1KO_U8A", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "3hyPwjkdHEA", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "3pTVbQilDqY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Talking to the camera", "gold": "C", "correct": true}
+{"qid": "3t_Knk7FWT8", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "3u__SZlBLC0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. Picked up a pen", "gold": "D", "correct": false}
+{"qid": "3zv9RkDPX14", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. Black gloves", "gold": "A", "correct": true}
+{"qid": "49YMA0f1yhI", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "4QSmRYQBfN4", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "C", "correct": false}
+{"qid": "4ouAf1ldH60", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "51dUUxFOjDE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "E", "correct": false}
+{"qid": "571nruSayeo", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "58mCJVNMJvw", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "59iv6EYWNn8", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "5Hn1UhlLphk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "5KLSf7kwr7s", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "E", "correct": false}
+{"qid": "5Ugjg2ru5QQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "5dJUUQufzw4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "5qMcDQd17Y4", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. car", "gold": "D", "correct": false}
+{"qid": "5tN9hyfdkaE", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "5zbV24vyO44", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "60-ADf8OL9A", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "60oHeCZHtvI", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "61SYvhojGvg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "66dwcQ1Y048", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "6Lb1PyJxVQM", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "6S_e34j6q9U", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. The man with curly brown hair", "gold": "B", "correct": false}
+{"qid": "6Z7AAcD8rbo", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "6d-EVupvWzU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "C", "correct": false}
+{"qid": "6hBbXVkgxGE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Bullet", "gold": "D", "correct": false}
+{"qid": "6moss7hGbvg", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "6qLYX6bzsl4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "7F9IrtSHmc0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "7MemY9jOmuk", "task": "T3_text_relation", "lambda": 0.0, "pred": "E. control well I'm joined Now", "gold": "E", "correct": true}
+{"qid": "7PqVVjEW0LM", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "7Q8d8Vvk6oo", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "7TljSpTBS9c", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "7XWqI121-Q4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "7m9XIXyT5_I", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. He is pouring the contents of", "gold": "D", "correct": true}
+{"qid": "7rMgpExA4kM", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "86CxyhFV9MI", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "88LbBgZP1vQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "8905KCkLDYc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "8Gl6iy7OEM4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "8MkL3W6wU3g", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "8Qe03WDCrB4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Soccer ball", "gold": "C", "correct": true}
+{"qid": "8_MG-E8QlBM", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "8ew0d0JmsfA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "8foMISZGiyw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. He picked up a wine glass", "gold": "D", "correct": false}
+{"qid": "8hhcFRoR0mw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Shaping the contents of the", "gold": "D", "correct": false}
+{"qid": "8k6M0HD162k", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E. The formula starting with the letter", "gold": "B", "correct": false}
+{"qid": "8urCPp_yhWs", "task": "T1_text_perception", "lambda": 0.0, "pred": "C. 2", "gold": "C", "correct": true}
+{"qid": "8wbNEJjBa0k", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "E", "correct": false}
+{"qid": "97nEBjiQI1M", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "9PD3ciudpIE", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "9S9i12n0TIw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "9WjElCiDpzM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "9aWPbYosJUw", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "9dSkvxS2EB0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "9m4wi5gPdHg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. Lie down", "gold": "C", "correct": true}
+{"qid": "9yQV0t5meo4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@_eat_sleep_travel_repeat-7275734357799652640", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "@_eat_sleep_travel_repeat-7296468146473536800", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@asianfoodrecipes-7109221563697876225", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@daiki.shino-7120297338056281349", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. She stood up", "gold": "C", "correct": true}
+{"qid": "@emsiiees-7296863219178638594", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@healthfood-6862748507976011013", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@healthfood-6867204066108329221", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@healthfood-6874943613630041350", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@healthfood-6880172230588894465", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@healthfood-6917750501975100677", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@healthfood-6948509102305791238", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@healthfood-6999715804623293702", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@healthfood-7115052132578921774", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@healthfood-7125042270381853995", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@healthfood-7135100078221430058", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "@healthfood-7200404243168415022", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@healthfood-7267233980473314606", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@jess.morg-7079970495499717934", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@jess.morg-7195624647830850858", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. The woman is kicking", "gold": "B", "correct": true}
+{"qid": "@jess.morg-7203120578537049386", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "@jess.morg-7206809277867052330", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. Blue flame", "gold": "B", "correct": true}
+{"qid": "@jess.morg-7248745529272700202", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@jess.morg-7255843192677911851", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@jess.morg-7272881154838023467", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@jess.morg-7275475379375164715", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@jess.morg-7284004157311421742", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@jess.morg-7291800958152084782", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Opened a door", "gold": "E", "correct": false}
+{"qid": "@jetset_anna-6933580627824495878", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@jetset_anna-6985193727107009798", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@jetset_anna-7126584501228129542", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@jonijawne-7184469162956246277", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@jonijawne-7194500194648476933", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. Presses the black long strip", "gold": "B", "correct": true}
+{"qid": "@jonijawne-7197144530024500485", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D. Beside the transparent glass wall", "gold": "D", "correct": true}
+{"qid": "@jonijawne-7214559428471770374", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@jonijawne-7305901654417706246", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@jonijawne-7312063059160206597", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "@jonijawne-7318074908645264645", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@kelseyinlondon-7068018011139050758", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@kelseyinlondon-7094322812327906565", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "@kelseyinlondon-7258968758130085146", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@kelseyinlondon-7287537087203511585", "task": "T3_text_relation", "lambda": 0.0, "pred": "D. a red chair", "gold": "E", "correct": false}
+{"qid": "@kerstinong-6900436106790194434", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "@kerstinong-6965059948090821890", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Running", "gold": "B", "correct": true}
+{"qid": "@kerstinong-6976239624578419969", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. Tapped the reclining woman", "gold": "C", "correct": true}
+{"qid": "@kerstinong-6999997457392307457", "task": "T3_text_relation", "lambda": 0.0, "pred": "D. She puts the gift into the", "gold": "E", "correct": false}
+{"qid": "@kerstinong-7074483613273754882", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@kerstinong-7097604725134118146", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@kerstinong-7197781091162279169", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@kerstinong-7254520467002854657", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "@lisolna-7184160724715883781", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@lisolna-7198577717292322054", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@lisolna-7203500499360877829", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. All black face", "gold": "D", "correct": false}
+{"qid": "@lisolna-7231929658869107994", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@lisolna-7235995901477604635", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@lisolna-7265337261737217312", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@lisolna-7265680288636767520", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "@lisolna-7282789187676294432", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@lisolna-7284252812194729248", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@lisolna-7288701821369978144", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options accurately describe the", "gold": "B", "correct": false}
+{"qid": "@lisolna-7315451966732193057", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "@lisolna-7321010343067618592", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@lisolna-7333990579963039009", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "@lisolna-7359951777845775648", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "@luxtravelbe-7233851486474636570", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "E", "correct": false}
+{"qid": "@luxtravelbe-7273938266183847200", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@luxtravelbe-7286546546932370721", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@movie.explained6-7252661595875183874", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@movie.explained6-7253164232307379457", "task": "T1_text_perception", "lambda": 0.0, "pred": "C. White", "gold": "B", "correct": false}
+{"qid": "@movie.explained6-7253792552996867330", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@movie.explained6-7254238802577820929", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E. Putting his arm around the boy", "gold": "B", "correct": false}
+{"qid": "@movie.explained6-7254803496900267266", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. Short hair", "gold": "A", "correct": true}
+{"qid": "@movie.explained6-7257359603489443073", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "@movie.explained6-7259227637992705282", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. earrings", "gold": "A", "correct": true}
+{"qid": "@movie.explained6-7261188695892462856", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options (A,", "gold": "B", "correct": false}
+{"qid": "@movie.explained6-7262938043315686664", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "C", "correct": false}
+{"qid": "@movie.explained6-7267308320413797650", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided scene sequences (A", "gold": "A", "correct": false}
+{"qid": "@movie.explained6-7267884432420277506", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Connected beard", "gold": "B", "correct": true}
+{"qid": "@movie.explained6-7268167132591000833", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. black", "gold": "E", "correct": false}
+{"qid": "@movie.explained6-7268213090708245761", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@movie.explained6-7268771669123042562", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. pink", "gold": "B", "correct": true}
+{"qid": "@movie.explained6-7268936523481943297", "task": "T3_text_relation", "lambda": 0.0, "pred": "A. He told me.", "gold": "A", "correct": true}
+{"qid": "@movie.explained6-7269006883380399362", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options accurately describe the", "gold": "E", "correct": false}
+{"qid": "@movie.explained6-7269647281668852993", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "@movie.explained6-7269746510462536962", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@movie.explained6-7270058010888768770", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@movie.explained6-7270058445577948418", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@movie.explained6-7270293967017725185", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "@movie.explained6-7274542274997013761", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@movie.explained6-7275485247351901442", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. He falls to the ground.", "gold": "D", "correct": false}
+{"qid": "@movie.explained6-7275653401025826050", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@movie.explained6-7276598470151032066", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Held a knife towards himself", "gold": "D", "correct": false}
+{"qid": "@movie.explained6-7277140989259599105", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@movie.explained6-7277548218106367234", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@movie.explained6-7278310085217094914", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. using the newspaper to block the", "gold": "B", "correct": true}
+{"qid": "@movie.explained6-7280742496882134274", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@placesunleashed-7283971258755140869", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "@placesunleashed-7285075986662624518", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@placesunleashed-7289528053112343814", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@placesunleashed-7293176969531870470", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@placesunleashed-7297000148201262341", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@placesunleashed-7297652941551439109", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Walking", "gold": "B", "correct": false}
+{"qid": "@placesunleashed-7298820532466683142", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. circular structured object", "gold": "B", "correct": true}
+{"qid": "@placesunleashed-7302913253959617797", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Walking on the beach", "gold": "C", "correct": true}
+{"qid": "@placesunleashed-7303594391850044678", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@placesunleashed-7308098412078025989", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@placesunleashed-7319588197858610438", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "@placesunleashed-7321079612488862981", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@placesunleashed-7324498849857326341", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@placesunleashed-7324761016909188358", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "@placesunleashed-7325156862486220038", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@placesunleashed-7326709884102216965", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. dinghy", "gold": "B", "correct": false}
+{"qid": "@placesunleashed-7327779917989416197", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "@placesunleashed-7334544531490196741", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@placesunleashed-7337436458078260485", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "@recipesbyanne-7112477530824756486", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "@recipesbyanne-7141686631676808454", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@recipesbyanne-7153617149041446150", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "@recipesbyanne-7161798161395240197", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@recipesbyanne-7190395053343296774", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@recipesbyanne-7231566545263103259", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. White sugar", "gold": "E", "correct": false}
+{"qid": "@recipesbyanne-7234536361296940314", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@thatrecipe.us-7245035133688892714", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "@thatrecipe.us-7262468242692689194", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "@thatrecipe.us-7266555380925287723", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@thatrecipe.us-7301855783438896427", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@thatrecipe.us-7309241426028596523", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "@thatrecipe.us-7335998138500648235", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@tiffycooks-6940704678569053446", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@tiffycooks-7003765189401185542", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "@tiffycooks-7022693587703926022", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "@tiffycooks-7062861483687873798", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@tiffycooks-7080578381569445125", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "@tiffycooks-7171182579058511110", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "@tiffycooks-7194857776877817094", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "@tiffycooks-7201571680890670342", "task": "T1_text_perception", "lambda": 0.0, "pred": "C. Wooden chopsticks", "gold": "C", "correct": true}
+{"qid": "AHeq99pojLo", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "AU0UJVNZMvA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. sword", "gold": "A", "correct": true}
+{"qid": "AYMdAVxALP4", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "Aau-XoIebno", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "AjF13uKVQa0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "AnLMDMzO4QY", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "Aw1_7wSaeKk", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "AxciimuEZAc", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. blue long-sleeve shirt", "gold": "A", "correct": true}
+{"qid": "BRiFXVCr1Ak", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "Bjymxow3TVQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "BkCbbFn21LY", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "BktEeBeA7a8", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided frames or descriptions match", "gold": "B", "correct": false}
+{"qid": "BtaVRhoLpC0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "Bwnkg6GbXwU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "CEZ9rbjK3P4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "CFm3bc9gqYE", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "CGngv8vTQOs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Flying straight up", "gold": "C", "correct": true}
+{"qid": "CdTijM0_es4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "ClYmTkGTGYg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "D0RyFh0hnkQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "D7VYbsORD8k", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "DRIpznER-VQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "B", "correct": false}
+{"qid": "DVsw1brd_Yc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "DX-mYMYf8jI", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "Dkm35G5kkcc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options accurately describe the", "gold": "D", "correct": false}
+{"qid": "DoizYSYQRqU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "DxxVla1CRvU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. He is bending down to pick", "gold": "B", "correct": true}
+{"qid": "E7FSg22MdKE", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "Efuyl2Anehg", "task": "T3_text_relation", "lambda": 0.0, "pred": "C. Abdullah: So she would go", "gold": "A", "correct": false}
+{"qid": "ErGYJ7kqIow", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "C", "correct": false}
+{"qid": "F2OhCCEIOcU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "F2i-LchFVCU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "F4bDyyEO4PU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "F7RSW-2rF4w", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "F8Ma1qs0Rkg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "FH1L2Dq6964", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "FOMS_yqdN1o", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "FnKDgC9aNu0", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "Fo97qfO-9_g", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "FoeeEQ0VVFE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "Fq3zbbp-lv4", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "Fw1rirubXiU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "GAoK4XjssrM", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "GFg98TDqCpw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "GGwHSz9towk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "GHScTyR2OgQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Picked up a whisk to", "gold": "D", "correct": true}
+{"qid": "GKgl3aJr5Xw", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. He spread his hands open on", "gold": "A", "correct": true}
+{"qid": "GRPLynULvJY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "GZFL58_pXPg", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "GZc0P3Apfx4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Hands in his pockets.", "gold": "C", "correct": false}
+{"qid": "GawGUhl9zuQ", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "GdFMKGNFXaE", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "GdZYLAI0vpc", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "Ge5SjsgaA4o", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "GuEptwLiAvs", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "GwcXYTX2GmA", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "H2ksp6sRR-k", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. Speaking to the camera", "gold": "B", "correct": true}
+{"qid": "H7gnsO4UZmU", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "HAED3riiZkw", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D. He puts on a white br", "gold": "D", "correct": true}
+{"qid": "HPunfsyjETs", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "HQns-h_82qU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E. Dropped the cane", "gold": "A", "correct": false}
+{"qid": "HRYlXC_ChzU", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "HWyDOQrYtCk", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "H_b5d-rLXJU", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "HeRS3nwySI8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Took off his fur coat", "gold": "E", "correct": false}
+{"qid": "HvSEKzpSdzw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "I-yg_3yx6iA", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "I2Fyzav8MxE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "IGmuaY1jB1w", "task": "T1_text_perception", "lambda": 0.0, "pred": "None of the provided options are correct.", "gold": "D", "correct": false}
+{"qid": "IN0osLg-Mn8", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. hat", "gold": "C", "correct": false}
+{"qid": "Ip9DbdOtqF4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "IuVyCbtGBFQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "J1IwKg2ufk8", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "JASFwBtUK40", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. Patrick Craine", "gold": "D", "correct": false}
+{"qid": "JDtVwz1R-kI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "JIoE18JYGcM", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "JLBsG65WoVU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "JLnsWrzV_j4", "task": "T1_text_perception", "lambda": 0.0, "pred": "C. Tied in a ponytail", "gold": "C", "correct": true}
+{"qid": "J_ZmaKRpyoU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "Jaw7eWzgWr0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. black", "gold": "C", "correct": true}
+{"qid": "Jfp1Ks7Hh1E", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "JhlzvoqKOc8", "task": "T1_text_perception", "lambda": 0.0, "pred": "C. Threw the white clothes into", "gold": "D", "correct": false}
+{"qid": "Jim_NG0PYpc", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "JpjytHmGHZ4", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "JuthlQ2Zo38", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "JwoBdRC2fzE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. Running race", "gold": "D", "correct": false}
+{"qid": "K24dFfIM0gI", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "KFqlW0APKRA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "KIf2fGmluhY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Shot the ball towards the basket", "gold": "C", "correct": false}
+{"qid": "KTY9bogonyw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Raising one hand", "gold": "B", "correct": false}
+{"qid": "KWv8DJMEHsE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Long knife", "gold": "D", "correct": true}
+{"qid": "KlZpZVphLrc", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "Kz8_rwVn094", "task": "T3_text_relation", "lambda": 0.0, "pred": "E. Shook hands with another masked", "gold": "C", "correct": false}
+{"qid": "L-XGTMusZvc", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "LAQRjgx_OY8", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "C", "correct": false}
+{"qid": "LAbtlJJhUlY", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. Picked up the piece of", "gold": "C", "correct": true}
+{"qid": "LB1qPExHQY8", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. The text turned black", "gold": "A", "correct": false}
+{"qid": "LHXS0QR1ThA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "LKQK0lud4fo", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. Closing her eyes", "gold": "E", "correct": false}
+{"qid": "LQ-mwO30_68", "task": "T3_text_relation", "lambda": 0.0, "pred": "A. A picture with sea and trees", "gold": "A", "correct": true}
+{"qid": "LVFvRNRTEd4", "task": "T1_text_perception", "lambda": 0.0, "pred": "D. Wood", "gold": "D", "correct": true}
+{"qid": "LYvStKy8iAc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "Lc7RikDaa30", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "LcZxjqtzXJI", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Observing the items in the", "gold": "A", "correct": false}
+{"qid": "Lf7uW4xK2bc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "LfUsGv-ESbc", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "Lk9ZihSgjdo", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "LlqsCCa6y58", "task": "T1_text_perception", "lambda": 0.0, "pred": "C. The right thumb taps the phone", "gold": "C", "correct": true}
+{"qid": "M-YfPangEfA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "M5Umm-ltnao", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "M5YKW6fhlss", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "M7YSCIkUaNw", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "MJYBHfYF8LI", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "MPQn_orwpfA", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "MTmUo6QITo4", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "Msz128EJeWE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "MvgJAD6tZXo", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Drinking water", "gold": "D", "correct": false}
+{"qid": "MyDAFlHsYsQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "N2mrK33gCYE", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "N4VtpYgZLVg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "N7RTTiHsSjI", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "NAJOZTNkhlI", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. He took off his sunglasses", "gold": "C", "correct": false}
+{"qid": "NHIT9vq6mJU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "NIxyQQfuVoc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "NMHmqgO04rU", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. White shirt", "gold": "E", "correct": false}
+{"qid": "NS2V_OHYkvA", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "NSeq-nVSY_E", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "NSn78eNspwU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the options accurately describe the sequence", "gold": "D", "correct": false}
+{"qid": "NWOF4GqpWaw", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "NexB4vj8_54", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "Ng2rNm6Nwsg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "NpYUxd1vUUE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options accurately describe the", "gold": "E", "correct": false}
+{"qid": "O3Hwh0uv8Mg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "O471uwTNx6k", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. The man is no longer wearing", "gold": "B", "correct": true}
+{"qid": "O6UedmnRJc0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided scenes match the description", "gold": "C", "correct": false}
+{"qid": "OAHsR02dUc0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "OAcbasjxljY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Feeding the prairie dog", "gold": "D", "correct": true}
+{"qid": "OGaML8Gg8JQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "OLO19ZtdRwQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "OMJc43wUPLM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A. The arrows change from opposing to", "gold": "A", "correct": true}
+{"qid": "OUeE8nCKWGA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Holding a book", "gold": "C", "correct": false}
+{"qid": "Oht0i1DACcA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "OmhVj_-cfH0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Gray", "gold": "C", "correct": true}
+{"qid": "Owmy5Vu3BnA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "P0BSTjziVys", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "P9hDA0u6FO0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "PCPQToF10IM", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "C", "correct": false}
+{"qid": "PCz04UJFaUY", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "PE32sjfN-uM", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. The screen focuses on the original", "gold": "B", "correct": true}
+{"qid": "PQRyGacBRA4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "PS0gXPNBZy8", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "PbiTIR8N4Hc", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "Pm93D8CVlY8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "PzUxuZ-KGsU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Green scallions", "gold": "B", "correct": true}
+{"qid": "Q47I8AdRgzc", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. like Venus", "gold": "E", "correct": false}
+{"qid": "Q4GK4asczVA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "QHS9ZZBdK-g", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "QJ6sjg7SXOQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "QPth_xqBXGY", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. Both rectangles were filled with more", "gold": "C", "correct": false}
+{"qid": "QUtk5xEw1mQ", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "QeXuzEwC9z4", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "C", "correct": false}
+{"qid": "QpDL3mopnWM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. On horseback", "gold": "B", "correct": true}
+{"qid": "RN2g9sRuJhA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "RQOdl64DtdI", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "RTUFPjliMCU", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "Ro_8-CCORzk", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "SAkgZJllNzw", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "SCZ_Z4NnikA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "SFfWUrsg4gE", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. Used his hand to open the", "gold": "B", "correct": true}
+{"qid": "SH7Unhifaj0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "SKET024GdlE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "SO3czkzeFjw", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options accurately describe the", "gold": "C", "correct": false}
+{"qid": "SYqEMs0EYoI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "Scne0ls23MA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "Sn7JPKbG6tY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "StLBHguzO8s", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "Sy2unO22PUE", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "T15Kv6dtYO0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "T1K4rgs-1b8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "T57jVsvVVR0", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. black", "gold": "B", "correct": false}
+{"qid": "T5bTeGzgJFs", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "TARe4G-SXfk", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "B", "correct": false}
+{"qid": "TFbGLEZ4qt0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "TMe7oXMJoSM", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "TXiX3NO5f5w", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "TlaX2iIYZD4", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "TxS1JnfuG34", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided scenes match the description", "gold": "A", "correct": false}
+{"qid": "TxbSa3ux8SU", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "B", "correct": false}
+{"qid": "TynnVVRNZGs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "UD5ifzOPzhc", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "UKU-W5bBCwY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "UM0VOrAtnPA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "UMFy3keSk-s", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "UN3ICsfqKEY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "UO_6TQnnOxM", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "US5Oz0q0BVE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "UUaiqR1I454", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "UbNyMSwoT5A", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "UbcWAfHo5j0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "UbgwG8fcIu0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "UwJTCg5fpXg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "UwlKYM2Sotg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "Uy_o-WCq2Cc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "V-RIpt7Tknc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. The empire was sacked", "gold": "C", "correct": false}
+{"qid": "V0h7rJShw0g", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "VFXJnbnN5ro", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "VGQ_djSR7zE", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "VL259eBJ68w", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "VLInjyogciw", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "VNvH5u5CWV8", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "VPcdtoldWCA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "VSZ8ywgGNGM", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "VkNF0rXuDXw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "Vn-z0qXp9bQ", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "VwZeSoYugZk", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. blue", "gold": "B", "correct": true}
+{"qid": "W8w09l_mmT4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. Lifted up", "gold": "B", "correct": true}
+{"qid": "W94Rth-aIkc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "WHxBO7XecSY", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "WLl3SeraTV0", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "WM78_KqcrSY", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "WTT7XZko3qk", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "WaiGdRYD36k", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "WmrwQMFZLqI", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "WpbB_swXHkc", "task": "T3_text_relation", "lambda": 0.0, "pred": "None of the provided subtitles match the description", "gold": "B", "correct": false}
+{"qid": "X0U3fP0tZyY", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "X29dPzJIMbA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "X5v4nBo5y28", "task": "T3_text_relation", "lambda": 0.0, "pred": "D. computer", "gold": "E", "correct": false}
+{"qid": "XAAqKoQM8Qc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "XJ6REZOXsvM", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "XR3Ov2nQ39s", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "XVXczyheik0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "XYsCVqz3iug", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "XuQswmEPgxU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options describe the text", "gold": "A", "correct": false}
+{"qid": "XvJqVKi8i_I", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "Y1YCvEip_ko", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "Y5833KeDmp4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "YcbKamVxDzI", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. A man wearing white clothes and", "gold": "E", "correct": false}
+{"qid": "YebUIUOCo94", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "YehqA9xoGTY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "Yh48p5efBTk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "YiHjsOqxtk0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "Ytv-9RM4e0o", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "E", "correct": false}
+{"qid": "YvM4rzSxX1U", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "Z-1lgAXOEc8", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "E", "correct": false}
+{"qid": "Z00vWImw1KQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "Z6Hx_BAZeUw", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "Z7Cox6lPW3c", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "Z9JSvDVMSm0", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "ZGMGQsnSdLE", "task": "T3_text_relation", "lambda": 0.0, "pred": "A. The magma flowed on the surface", "gold": "C", "correct": false}
+{"qid": "ZL07dkaoHOg", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "ZRMbh0wSly0", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. Small skirts adorned with colorful flowers", "gold": "C", "correct": false}
+{"qid": "ZaXpMou55lw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "ZfapKqwklG4", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "ZoUsR8t8IxE", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. A man with brown hair wearing", "gold": "D", "correct": false}
+{"qid": "ZsnfXfuGRrg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. The book is opened.", "gold": "B", "correct": true}
+{"qid": "_1kZe-2kiuQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. The first person", "gold": "A", "correct": false}
+{"qid": "_7sd4fjnmvc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "_BDzMutoy6A", "task": "T1_text_perception", "lambda": 0.0, "pred": "D. Frying sesame balls", "gold": "D", "correct": true}
+{"qid": "_EUDpS9UF9o", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "_Y1pW77M3Pg", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "_ZIa6SEJEyg", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "_g3Y_mk64Wc", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "_hODR1cR9lo", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "_kQXNFG664Y", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "_qepWb_NVj4", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "_uL3a3aMdMQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "_zEM6Fc-7NI", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "aCPNlZ7bvRc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "aVHAr8rc-Ks", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "aX_HgA5SNLQ", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "a_8G0PzVFbc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "a_hkRXc_bYg", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. He opens his eyes and mouth", "gold": "B", "correct": true}
+{"qid": "acAWfzV__XI", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. Draws a blue arrow on the", "gold": "D", "correct": false}
+{"qid": "akoJDx23QWU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "alEV01SMFNk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. Preparing to pour it into", "gold": "D", "correct": true}
+{"qid": "anQ5KFW8Gn4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "anrKq6HgPvs", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "aoxy2e7j9Bc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "aqGQw1bXFN4", "task": "T3_text_relation", "lambda": 0.0, "pred": "D. What are you doing", "gold": "E", "correct": false}
+{"qid": "aqUisZS9Ruw", "task": "T3_text_relation", "lambda": 0.0, "pred": "A. hope you want to", "gold": "D", "correct": false}
+{"qid": "athabNMGceo", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "bAGhXcYc0o4", "task": "T1_text_perception", "lambda": 0.0, "pred": "D. white desk lamp", "gold": "D", "correct": true}
+{"qid": "bDpgz_2Piqg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "bH1Q9AM5vik", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "bUaFXONIXzM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "bXRuqcmTIuk", "task": "T3_text_relation", "lambda": 0.0, "pred": "None of the provided subtitles describe a scene", "gold": "E", "correct": false}
+{"qid": "b__dUom9AcQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "baFsMWNavQ4", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. that we were doing", "gold": "B", "correct": true}
+{"qid": "bgklOaBBmB8", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "bqQTWdk1DAM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "brZugTJ0odg", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "bwDfdTh0VYs", "task": "T3_text_relation", "lambda": 0.0, "pred": "D. Two circular icons appear.", "gold": "C", "correct": false}
+{"qid": "by3NxI0dA6w", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A. From white to blackish-gray", "gold": "A", "correct": true}
+{"qid": "byaqQClCO-Y", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "c6fuIEzOZ2E", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "cc0T2vtuJtc", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "cceTeD4JADU", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. 2", "gold": "C", "correct": false}
+{"qid": "crmV4OduHYA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the options A through E are", "gold": "D", "correct": false}
+{"qid": "d-GKQeu4S6M", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "d5JlCEDlHGE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "d7IqrLV6Tlg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options (A,", "gold": "C", "correct": false}
+{"qid": "d8H7hgQY9ew", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "dCscvoOX2as", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "C", "correct": false}
+{"qid": "dE5iWeCVpGI", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "E", "correct": false}
+{"qid": "duxO1EZ650E", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "C", "correct": false}
+{"qid": "dxjKdnJFmLs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "e-EtQHH4aWE", "task": "T3_text_relation", "lambda": 0.0, "pred": "A. Clasp hands together", "gold": "A", "correct": true}
+{"qid": "e11Q4ThFu5A", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Transparent glass cup", "gold": "B", "correct": true}
+{"qid": "e6HwinLBK_Y", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "eDso3zHFxL8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "eE5Z7gDbgVA", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. Round tattoo", "gold": "B", "correct": false}
+{"qid": "eJr-y6UXnRE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A. white", "gold": "E", "correct": false}
+{"qid": "e_nAKiSutiA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "er1oRjH2iu8", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "ezhafkxoRdo", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "C", "correct": false}
+{"qid": "f0IbZGfTgUM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "f2-6Mh6lyQQ", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. Repairing the item", "gold": "C", "correct": false}
+{"qid": "fLn06p2HtAc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "fO7nwCix8xU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E. Table lamp", "gold": "E", "correct": true}
+{"qid": "fPLjjr8w6DU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "fWNJmZAWRNg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. A woman in a blue dress", "gold": "D", "correct": false}
+{"qid": "fZBC3nmvJb8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "fp1r40w_PtA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "C", "correct": false}
+{"qid": "fryyNwUCPWA", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. silver ring", "gold": "C", "correct": false}
+{"qid": "fsz6bkkIHzQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. The screen gradually becomes clear", "gold": "D", "correct": false}
+{"qid": "fvCrE5NCsts", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. The gun fired", "gold": "A", "correct": true}
+{"qid": "fxCRCMLJ0PU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options accurately describe the", "gold": "D", "correct": false}
+{"qid": "fySqsm5kNl4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. He throws the wooden stick into", "gold": "C", "correct": true}
+{"qid": "g7zuBUMBr2E", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "gAgCnu82RHE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "gJijNOktmoI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "gJuOMPiixUA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "None of the above.", "gold": "A", "correct": false}
+{"qid": "gURB1JwPfJw", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "g_kziK-UOSU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "gtX_oRpLClY", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "gyV6EqgiPNg", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "h0OHi9uAcBo", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "B", "correct": false}
+{"qid": "h2RbVVz3NZc", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "h4jIoMxZopU", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "hXFfPjytMo0", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "hf4WUOagFAw", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "hg2Q_O5b9w4", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "hznvV2bBkX4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. She is walking on the street", "gold": "D", "correct": false}
+{"qid": "i327DBSS_iE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "C", "correct": false}
+{"qid": "i6C6r2g4Y7Q", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. He walks forward into the crowd", "gold": "A", "correct": false}
+{"qid": "i8TJ7RgimNM", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "iDFDxwPTjeU", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "iHNjWhx3EaI", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "iHzypa15yRA", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "iJgh2dnudIU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "iJk-HMfO4yQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "ie9NxdgNe0g", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options (A,", "gold": "C", "correct": false}
+{"qid": "il_wMYlDQ6I", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. remaining on the flat ground", "gold": "A", "correct": false}
+{"qid": "ip8khYCMb8Y", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Playing on the surfboard in", "gold": "C", "correct": true}
+{"qid": "iwXp1fT89-M", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options accurately describe the", "gold": "C", "correct": false}
+{"qid": "ixAU3l0sX_o", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "ixlQX7lV8dc", "task": "T3_text_relation", "lambda": 0.0, "pred": "A. gecko", "gold": "D", "correct": false}
+{"qid": "j6beJTHUT_c", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "j7kxn5CsHnw", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "jJGbXCCU5yc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. lucky", "gold": "B", "correct": false}
+{"qid": "jbPR2SJuFHg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "jdbG9gmg_SA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "jiR7qHzgq_c", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A. changed into coats", "gold": "A", "correct": true}
+{"qid": "jvkmcX47bKU", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "k194yU67Zik", "task": "T3_text_relation", "lambda": 0.0, "pred": "D. you bye", "gold": "E", "correct": false}
+{"qid": "k4jiEuZbN-4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "kFHVBCEwC3w", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "kLuqCtnKr_8", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "kMryvefpcF8", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "C", "correct": false}
+{"qid": "kN88RP3XWUU", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "kONR5_mHofA", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "kOZnpwI2hIM", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "kWUmHAzCp7s", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "kbRtl58u_kk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "kj3Po7zUeyw", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "kk-iRzLv81o", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "l3vxOGgAM2g", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "lCvQtGVhUrc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. The book changes from a black", "gold": "C", "correct": false}
+{"qid": "lN3WnXMaE0o", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "C", "correct": false}
+{"qid": "lNReCCShKJQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "lQODAJ_F5yE", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "lcEaHk8f4Co", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "liRm38L9EC4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "ll3tR0kUZHc", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. The cake was moved to the", "gold": "B", "correct": true}
+{"qid": "lnCPn8gX3FU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Pulling the girl next to", "gold": "B", "correct": true}
+{"qid": "lojHyp1k0gE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Picking flowers", "gold": "B", "correct": true}
+{"qid": "luRqMb5qfhM", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "lzAESaVqix0", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C. Hit the ball with the paddle", "gold": "C", "correct": true}
+{"qid": "lzuixOdhZow", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. kissing", "gold": "B", "correct": true}
+{"qid": "m1mGerQhdHA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "m7sL8LuMD8Q", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A. Turn her head", "gold": "A", "correct": true}
+{"qid": "mB7NW91REF4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "mFcEWmtn3ag", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options (A,", "gold": "D", "correct": false}
+{"qid": "mFliMGufpwc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "None of the provided options (electric fan", "gold": "A", "correct": false}
+{"qid": "mH9LdC7IFH8", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "mHARxee4EzQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "mHccnoh9f5w", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "mOiEOs3ZlT8", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "D", "correct": false}
+{"qid": "mS1QPVgBDQo", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "mTn_C-SyW84", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "mYotOV3Q51g", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "marOr6mJefE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "mbcvVYobCXI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "C", "correct": false}
+{"qid": "md3LVlEzFBU", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. blue", "gold": "D", "correct": false}
+{"qid": "mfS6gyP0mwo", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "mkqgTAe2_O4", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "mld0TnA2jEs", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "mq6L8CnNJXc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "None of the provided frames show a white", "gold": "B", "correct": false}
+{"qid": "mqtJErix0ss", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "n24n_20Kwe4", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. Holds a doll and shows a", "gold": "B", "correct": true}
+{"qid": "nBWB-h68E4k", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "nWDNzv1Gk8Q", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. She is making a 'yeah", "gold": "D", "correct": false}
+{"qid": "npLd4WTSQsM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "nvG2YMWiwqU", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. She is handing the food in", "gold": "B", "correct": true}
+{"qid": "o2F-N42Ufo4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options (A,", "gold": "A", "correct": false}
+{"qid": "oCXKARwr6PA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "oI975O1BUu0", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "oKX6y9-zTfI", "task": "T3_text_relation", "lambda": 0.0, "pred": "C. Three men wearing white and orange", "gold": "D", "correct": false}
+{"qid": "oO8OJZFZT9s", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "oddHY1vwcjo", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "oiBhGhROP5o", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "otaJfBSlsG8", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "ozpGTw6DrXs", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "p7YxwveUrjI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "pFpZvRsEGZs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. black", "gold": "C", "correct": false}
+{"qid": "pFtKaT3GF9I", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options (A,", "gold": "C", "correct": false}
+{"qid": "pGEF7Tme3Tk", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "pJI5ZU6wxqg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "pJuq8D1NGJQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "pPJq1rMDRGs", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "pZ-9hGQNHuA", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "q2bpkhjNxf0", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "q3FAxTSENEw", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "qYnloYaeQA8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "qZVBFAtfp2A", "task": "T1_text_perception", "lambda": 0.0, "pred": "D. Pink jacket", "gold": "D", "correct": true}
+{"qid": "qbA42wQoWAs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. black shirts", "gold": "A", "correct": false}
+{"qid": "qjY9kmveQAk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "qksR2Zvd-FM", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "qsH6q5wNso4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "qyaQ-wfojbM", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "rIU_BQEuKQ8", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "rMXJOKhf_AA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "rP7sQe784k8", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "rVGE6xhfVJE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "rZq-8Bq3mkU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "E", "correct": false}
+{"qid": "rwL_XPw46zQ", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "rzIiQ4Vxlbk", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. Looked down at the camera", "gold": "B", "correct": true}
+{"qid": "s1TjVlKBpjs", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "B", "correct": false}
+{"qid": "s2N4cPqCdys", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. white", "gold": "B", "correct": false}
+{"qid": "s49y2RP5C7E", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "s5edwp0PEqk", "task": "T4_visual_relation", "lambda": 0.0, "pred": "None of the provided options (A,", "gold": "B", "correct": false}
+{"qid": "sEiyR7-0FOA", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "sHUEJw1BsGQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "C. cigarette", "gold": "C", "correct": true}
+{"qid": "sKvvuo9Yxqk", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "sWfcgeDth_w", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "shGkzHpzwAQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "soNQYQXrx_A", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "A", "correct": false}
+{"qid": "sv4wLIbSDqo", "task": "T3_text_relation", "lambda": 0.0, "pred": "C. He puts down his right hand", "gold": "C", "correct": true}
+{"qid": "t1nhAnMQBHg", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "B", "correct": false}
+{"qid": "t3P11ENBZyc", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "t48HXAjjDAU", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "tCnelzIAHA0", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "tGiRbGGwRj8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "tPQf5sB03ZE", "task": "T3_text_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "tWiGnu2BNsY", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "tYqDvtknII4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "td35F9LNazA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "tdA5atpqaAc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. Placing the meat from the", "gold": "B", "correct": true}
+{"qid": "tdm72-vYxTs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "to7vCdkLi4s", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "tygk9-aneC4", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "u-vYvqxHejY", "task": "T1_text_perception", "lambda": 0.0, "pred": "B. Black and white photo", "gold": "B", "correct": true}
+{"qid": "u1D4ArcBjLI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "E", "correct": false}
+{"qid": "u5NAcHhI_Uc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "uDZrl35yeZE", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D. on a sunny beach", "gold": "E", "correct": false}
+{"qid": "uJgZo4KxoZw", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Triangle", "gold": "D", "correct": false}
+{"qid": "uWBh0meTg08", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "v-7zF3Y0yJs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D. black", "gold": "D", "correct": true}
+{"qid": "v0QLje6xYgA", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A", "gold": "D", "correct": false}
+{"qid": "vE0faFD1F_g", "task": "T1_text_perception", "lambda": 0.0, "pred": "D. black", "gold": "D", "correct": true}
+{"qid": "vEy6tcU6eLU", "task": "T1_text_perception", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "vJ9hYCUDHTo", "task": "T1_text_perception", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "vP-fQu22bng", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "A", "correct": false}
+{"qid": "vVRC-0VKPrg", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "vix2_R79-l4", "task": "T3_text_relation", "lambda": 0.0, "pred": "C", "gold": "B", "correct": false}
+{"qid": "vpKtHB8x0js", "task": "T3_text_relation", "lambda": 0.0, "pred": "None of the provided options are correct.", "gold": "C", "correct": false}
+{"qid": "w2HKqOhf7KQ", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "wFrztzzohJ8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "B. White pocket", "gold": "A", "correct": false}
+{"qid": "wGWbI3BHVM8", "task": "T3_text_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "wKd804fWOyQ", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "wSHPuI7wWIg", "task": "T1_text_perception", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "wWNBYEUxews", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}
+{"qid": "wl58wNMvi6Y", "task": "T3_text_relation", "lambda": 0.0, "pred": "B. Five water drop icons appear on", "gold": "E", "correct": false}
+{"qid": "wq90Upjaij8", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "wvfctNd-Aio", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "wxWo44MoCTI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "B", "correct": false}
+{"qid": "x1FkhxMMIcg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "x4UBaEojM6U", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "D", "correct": false}
+{"qid": "x4dFLY_-vKs", "task": "T1_text_perception", "lambda": 0.0, "pred": "A. black cap", "gold": "A", "correct": true}
+{"qid": "xSzXFQPldJg", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "A", "correct": false}
+{"qid": "xiK00WS0lkE", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C. Played the saxophone", "gold": "C", "correct": true}
+{"qid": "yFAuXmcGk2Y", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "yU9fGAEcxJY", "task": "T2_visual_perception", "lambda": 0.0, "pred": "A. Mix the two together", "gold": "A", "correct": true}
+{"qid": "yXXhrMqfMlk", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "ydm72ftJStQ", "task": "T1_text_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "yl-6-Yzt--A", "task": "T2_visual_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "yn7oTvw8QRY", "task": "T4_visual_relation", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "yqejTvYILlA", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B. Puts the bottle on the", "gold": "B", "correct": true}
+{"qid": "ysRFFN5nzqE", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "yz3lOAe32Tw", "task": "T3_text_relation", "lambda": 0.0, "pred": "E", "gold": "A", "correct": false}
+{"qid": "z6HTO2SOxUc", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "z6THwql5c6w", "task": "T3_text_relation", "lambda": 0.0, "pred": "A. Red prohibition sign", "gold": "A", "correct": true}
+{"qid": "z8YF-D-t7AI", "task": "T4_visual_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "zJ2uPZfkYMk", "task": "T4_visual_relation", "lambda": 0.0, "pred": "E", "gold": "D", "correct": false}
+{"qid": "zTeDF7mQ88A", "task": "T4_visual_relation", "lambda": 0.0, "pred": "A", "gold": "A", "correct": true}
+{"qid": "zU3bjOKfsww", "task": "T2_visual_perception", "lambda": 0.0, "pred": "D", "gold": "D", "correct": true}
+{"qid": "zVudr8cxHRE", "task": "T3_text_relation", "lambda": 0.0, "pred": "B", "gold": "B", "correct": true}
+{"qid": "zda-T6wrEhs", "task": "T2_visual_perception", "lambda": 0.0, "pred": "None of the provided options describe the woman", "gold": "B", "correct": false}
+{"qid": "ze66pbJYr18", "task": "T1_text_perception", "lambda": 0.0, "pred": "C", "gold": "C", "correct": true}
+{"qid": "zk6fgbXI5AE", "task": "T3_text_relation", "lambda": 0.0, "pred": "None of the options are correct. The", "gold": "D", "correct": false}
+{"qid": "zkmoxOKhpvk", "task": "T2_visual_perception", "lambda": 0.0, "pred": "E", "gold": "E", "correct": true}

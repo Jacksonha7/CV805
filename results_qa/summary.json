@@ -1,0 +1,134 @@
+{
+ "uniform": {
+  "n": 753,
+  "acc": 0.6148738379814077,
+  "split_seed": null,
+  "per_task": {
+   "T3_text_relation": 0.5380116959064327,
+   "T1_text_perception": 0.6929133858267716,
+   "T4_visual_relation": 0.5825688073394495,
+   "T2_visual_perception": 0.6582278481012658
+  }
+ },
+ "fixed:0.0": {
+  "n": 753,
+  "acc": 0.6042496679946879,
+  "split_seed": null,
+  "per_task": {
+   "T3_text_relation": 0.5087719298245614,
+   "T1_text_perception": 0.7165354330708661,
+   "T4_visual_relation": 0.5596330275229358,
+   "T2_visual_perception": 0.6540084388185654
+  }
+ },
+ "fixed:0.3": {
+  "n": 753,
+  "acc": 0.6308100929614874,
+  "split_seed": null,
+  "per_task": {
+   "T3_text_relation": 0.5263157894736842,
+   "T1_text_perception": 0.7637795275590551,
+   "T4_visual_relation": 0.5871559633027523,
+   "T2_visual_perception": 0.6751054852320675
+  }
+ },
+ "fixed:0.7": {
+  "n": 753,
+  "acc": 0.6268260292164675,
+  "split_seed": null,
+  "per_task": {
+   "T3_text_relation": 0.543859649122807,
+   "T1_text_perception": 0.7716535433070866,
+   "T4_visual_relation": 0.5688073394495413,
+   "T2_visual_perception": 0.6624472573839663
+  }
+ },
+ "fixed:1.0": {
+  "n": 753,
+  "acc": 0.6148738379814077,
+  "split_seed": null,
+  "per_task": {
+   "T3_text_relation": 0.5380116959064327,
+   "T1_text_perception": 0.7637795275590551,
+   "T4_visual_relation": 0.555045871559633,
+   "T2_visual_perception": 0.6455696202531646
+  }
+ },
+ "oracle": {
+  "n": 753,
+  "acc": 0.649402390438247,
+  "split_seed": null,
+  "per_task": {
+   "T3_text_relation": 0.5614035087719298,
+   "T1_text_perception": 0.7952755905511811,
+   "T4_visual_relation": 0.6055045871559633,
+   "T2_visual_perception": 0.6751054852320675
+  }
+ },
+ "results_v4/lwf_default_seed0": {
+  "n": 229,
+  "acc": 0.62882096069869,
+  "split_seed": 0,
+  "per_task": {
+   "T1_text_perception": 0.8461538461538461,
+   "T2_visual_perception": 0.6527777777777778,
+   "T3_text_relation": 0.4807692307692308,
+   "T4_visual_relation": 0.5909090909090909
+  }
+ },
+ "results_v4/lwf_default_seed1": {
+  "n": 229,
+  "acc": 0.6593886462882096,
+  "split_seed": 1,
+  "per_task": {
+   "T1_text_perception": 0.7948717948717948,
+   "T2_visual_perception": 0.6666666666666666,
+   "T3_text_relation": 0.6153846153846154,
+   "T4_visual_relation": 0.6060606060606061
+  }
+ },
+ "results_v4/lwf_default_seed2": {
+  "n": 229,
+  "acc": 0.6681222707423581,
+  "split_seed": 2,
+  "per_task": {
+   "T1_text_perception": 0.7435897435897436,
+   "T2_visual_perception": 0.7222222222222222,
+   "T3_text_relation": 0.5769230769230769,
+   "T4_visual_relation": 0.6363636363636364
+  }
+ },
+ "results_v4/naive_default_seed0": {
+  "n": 229,
+  "acc": 0.6200873362445415,
+  "split_seed": 0,
+  "per_task": {
+   "T1_text_perception": 0.8461538461538461,
+   "T2_visual_perception": 0.6527777777777778,
+   "T3_text_relation": 0.5,
+   "T4_visual_relation": 0.5454545454545454
+  }
+ },
+ "results_v4/naive_default_seed1": {
+  "n": 229,
+  "acc": 0.6724890829694323,
+  "split_seed": 1,
+  "per_task": {
+   "T1_text_perception": 0.7692307692307693,
+   "T2_visual_perception": 0.6805555555555556,
+   "T3_text_relation": 0.6346153846153846,
+   "T4_visual_relation": 0.6363636363636364
+  }
+ },
+ "results_v4/naive_default_seed2": {
+  "n": 229,
+  "acc": 0.6375545851528385,
+  "split_seed": 2,
+  "per_task": {
+   "T1_text_perception": 0.6666666666666666,
+   "T2_visual_perception": 0.6805555555555556,
+   "T3_text_relation": 0.5769230769230769,
+   "T4_visual_relation": 0.6212121212121212
+  }
+ }
+}

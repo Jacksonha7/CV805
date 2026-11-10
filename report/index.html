@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VSI 持续学习探索报告</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* layout: one reading column (~68ch) with full-width figures; step cards carry a left rule */
+  --bg: #f6f7f9;
+  --paper: #ffffff;
+  --ink: #1c2430;
+  --muted: #5b6676;
+  --line: #dde2ea;
+  --accent: #2563a8;
+  --good: #2f7a4f;
+  --warn: #a8641a;
+  --bad: #9b2c2c;
+  --chip-main: #dbe8f7;
+  --chip-app: #e8efe6;
+  --chip-int: #eceef2;
+  --font-display: "Noto Serif SC", "Songti SC", "SimSun", serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12161c; --paper: #1a2029; --ink: #e4e8ee; --muted: #9aa5b4; --line: #2c3440;
+    --accent: #7fb0e6; --good: #6cc093; --warn: #e0a35a; --bad: #e08080;
+    --chip-main: #1e3550; --chip-app: #22382a; --chip-int: #2a313b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12161c; --paper: #1a2029; --ink: #e4e8ee; --muted: #9aa5b4; --line: #2c3440;
+  --accent: #7fb0e6; --good: #6cc093; --warn: #e0a35a; --bad: #e08080;
+  --chip-main: #1e3550; --chip-app: #22382a; --chip-int: #2a313b;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.75; }
+main { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; display: grid; gap: 28px; }
+.prose { max-width: 70ch; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.35; margin: 0; }
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.4rem; margin-top: 12px; }
+h3 { font-size: 1.12rem; }
+p { margin: 0; }
+.stack { display: grid; gap: 12px; }
+.meta { color: var(--muted); font-size: .92rem; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 22px 24px; display: grid; gap: 14px; }
+.tldr { border-left: 4px solid var(--accent); }
+.tldr ol { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
+.step { border-left: 4px solid var(--accent); }
+.step.twist { border-left-color: var(--warn); }
+.step .when { color: var(--muted); font-size: .88rem; }
+.label { font-weight: 700; color: var(--accent); margin-right: .4em; }
+.twist .label { color: var(--warn); }
+figure { margin: 0; display: grid; gap: 8px; }
+figure img { width: 100%; height: auto; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 8px; }
+figcaption { font-size: .92rem; color: var(--muted); }
+figcaption b { color: var(--ink); }
+.chip { display: inline-block; font-size: .78rem; padding: 1px 9px; border-radius: 999px; margin-left: 6px; vertical-align: 1px; color: var(--ink); white-space: nowrap; }
+.chip.main { background: var(--chip-main); }
+.chip.app { background: var(--chip-app); }
+.chip.int { background: var(--chip-int); }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; font-variant-numeric: tabular-nums; }
+th, td { border-bottom: 1px solid var(--line); padding: 6px 10px; text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+thead th { color: var(--muted); font-weight: 500; }
+tr.hl td { font-weight: 700; }
+td.note { text-align: left; white-space: normal; color: var(--muted); }
+.pos { color: var(--good); }
+.neg { color: var(--bad); }
+.flow { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+.flow .box { flex: 1 1 150px; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; background: var(--bg); font-size: .9rem; }
+.flow .box b { display: block; color: var(--accent); margin-bottom: 2px; }
+.flow .arrow { align-self: center; color: var(--muted); }
+code { font-size: .88em; background: var(--bg); padding: 1px 5px; border-radius: 4px; }
+ul.find { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .92rem; }
+.toc a { color: var(--accent); text-decoration: none; }
+.toc a:hover, .toc a:focus-visible { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 520px) { main { padding: 20px 16px 60px; } .card { padding: 16px; } h1 { font-size: 1.5rem; } }
+</style>
+</head>
+<body>
+<main>
+
+<header class="stack">
+  <h1>把持续学习用到关键帧搜索上：探索报告</h1>
+  <p class="meta">CV805 课程项目 · 数据 LongVideoBench 验证集 753 题 · 2026-09-10 至 2026-11-06 · 代码 github.com/Jacksonha7/continual-vsi（私有）</p>
+  <p class="meta">每张图后面的标签是我的建议：<span class="chip main">建议放正文</span><span class="chip app">建议放附录</span><span class="chip int">仅供内部判断</span>。图里的文字用英文，可以直接放进论文；矢量版 PDF 在 <code>report/figs/</code>。</p>
+  <nav class="toc" aria-label="目录">
+    <a href="#tldr">一页结论</a><a href="#goal">我们想做什么</a><a href="#s1">第1步 搭数据</a><a href="#s2">第2步 第一轮实验</a><a href="#s3">第3步 诊断</a><a href="#s4">第4步 逐题特征</a><a href="#s5">第5步 GT 帧率</a><a href="#s6">第6步 修正后重跑</a><a href="#s7">第7步 下游问答</a><a href="#review">全程回顾</a><a href="#findings">发现总结</a><a href="#figlist">图表清单</a>
+  </nav>
+</header>
+
+<section id="tldr" class="card tldr">
+  <h2>一页结论</h2>
+  <ol>
+    <li><b>前提成立：</b>文本类问题确实需要更偏字幕的权重。每道题的最佳 λ，文本类平均 0.62，视觉类平均 0.49（p = 1.6×10⁻⁶）。按任务挑最佳常数，文本类是 0.8 到 0.9，视觉类是 0.0 到 0.3。</li>
+    <li><b>VSI 默认的 λ=0.3 在修正 GT 后偏低：</b>全部 753 题上 λ=0.7 的召回率比 0.3 高约 3 个点。</li>
+    <li><b>学出来的 λ 比 λ=0.3 高约 5 个点，9 次运行全赢。</b>但和“在训练集上调好的单一常数 λ”比，只高 0.6 个点（LwF，7/9 次更好），并且低于“每个任务一个常数”。原因是预测头给 4 个任务输出的 λ 几乎一样，都在 0.6 左右，没有学会区分任务。</li>
+    <li><b>防遗忘方法有用，但信号弱：</b>LwF 和 joint 的遗忘量约为 naive 的一半（0.015 对 0.029），但只有 6/9 次运行成立。</li>
+    <li><b>下游问答几乎不受影响：</b>学出来的 λ 只比 λ=0.3 的问答正确率高 0.4 个点，不显著。在 284 道换 λ 选帧会变的题上，最优 λ 能多答对 5 个点，说明 λ 本身有用，只是可提升的题少，而且现在的预测头抓不住。</li>
+    <li><b>过程中修了 4 个会让结论完全错掉的问题：</b>标注索引空间错配、短视频被静默丢弃、解码方式和训练目标不一致、GT 帧率按错误的 fps 换算。</li>
+  </ol>
+</section>
+
+<section id="goal" class="card">
+  <h2>我们想做什么</h2>
+  <div class="prose stack">
+    <p>VSI 是一个给长视频挑关键帧的方法。它对每一秒画面打两个分：一个看画面里有没有问题提到的物体（视觉分支，用 YOLO-World），一个看这一秒的字幕和问题像不像（字幕分支）。两个分数各自归一化后按权重相加，取最高的 8 帧交给大模型答题。</p>
+    <p>这个权重就是 <b>λ</b>：λ=0 只看画面，λ=1 只看字幕，VSI 固定用 0.3。我们的直觉是，问“字幕里说了什么”的题应该多看字幕，问“画面里有什么”的题应该多看画面，所以 λ 不该一刀切。</p>
+    <p>持续学习（continual learning）的角度是：不同类型的问题是一批一批来的，我们训练一个很小的“λ 预测器”，每来一类新问题就接着学，希望它学会新类型的同时不忘记旧类型。所以整个项目的研究对象就是 <b>λ</b>：它该不该随问题变、能不能学出来、学了会不会忘、学好了对答题有没有用。</p>
+  </div>
+  <div class="flow" aria-label="方法流程">
+    <div class="box"><b>问题 + 长视频</b>LongVideoBench，每秒一帧</div>
+    <div class="arrow">→</div>
+    <div class="box"><b>两条分数曲线</b>视觉分 s_obj、字幕分 s_text（预先算好缓存）</div>
+    <div class="arrow">→</div>
+    <div class="box"><b>λ 预测头</b>小 MLP，输入曲线统计特征，按任务顺序持续学习</div>
+    <div class="arrow">→</div>
+    <div class="box"><b>融合取 top-8</b>(1−λ)·视觉 + λ·字幕</div>
+    <div class="arrow">→</div>
+    <div class="box"><b>评测</b>选帧召回率 recall@8；下游用 Qwen3-VL 答题</div>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>设置</th><th>内容</th></tr></thead>
+      <tbody>
+        <tr><td>数据</td><td class="note">LongVideoBench 验证集，每个视频取 1 道题，共 753 题；每个任务内部 70% 训练、30% 测试</td></tr>
+        <tr><td>4 个任务</td><td class="note">T1 文本感知（127 题）、T2 视觉感知（237）、T3 文本关系（171）、T4 视觉关系（218）</td></tr>
+        <tr><td>任务顺序</td><td class="note">default：T1→T2→T3→T4；grouped：T1→T3→T2→T4；random：T3→T1→T2→T4</td></tr>
+        <tr><td>重复</td><td class="note">3 种顺序 × 3 个随机种子 = 每个方法 9 次运行</td></tr>
+        <tr><td>持续学习方法</td><td class="note">naive（直接接着训）、EWC、LwF、ER（回放旧样本）、joint（所有任务一起训，作为参考上限）、kNN（检索相似题的 λ）</td></tr>
+        <tr><td>参照</td><td class="note">固定 λ=0.3（VSI 默认）、单一常数 λ（在训练集上调）、每任务一个常数、oracle（每题用最好的 λ，作为天花板）</td></tr>
+        <tr><td>选帧指标</td><td class="note">recall@8：GT 关键帧中，有多少落在选中 8 帧的 ±5 秒内</td></tr>
+        <tr><td>持续学习指标</td><td class="note">ACC：学完全部任务后各任务召回率的平均；FM（遗忘量）：每个任务历史最好成绩减最终成绩的平均，越小越好</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="s1" class="card step">
+  <p class="when">第 1 步 · 9 月 10 日</p>
+  <h3>先把数据搭起来，排掉三个会让结果全错的坑</h3>
+  <div class="prose stack">
+    <p><span class="label">做了什么</span>对 753 道题预先算好两条分数曲线并缓存，之后所有实验都在缓存上跑，CPU 几分钟一轮。</p>
+    <p><span class="label">结果</span>第一次跑出来的数字明显不对劲，排查后发现三个问题：</p>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>问题</th><th>现象</th><th>修法</th></tr></thead>
+      <tbody>
+        <tr><td>标注和分数不在同一个坐标里</td><td class="note">GT 是视频帧号，分数曲线按秒索引，直接比较导致 94% 的题召回率恒为 0</td><td class="note">统一换算到“秒”</td></tr>
+        <tr><td>短视频被静默丢掉</td><td class="note">VSI 把帧拼成 4×4 网格，16 秒以内的视频凑不满就报错跳过，丢了 197 题，而且偏向文本类任务</td><td class="note">短视频自动缩小网格，753 题全部覆盖</td></tr>
+        <tr><td>“每题最佳 λ”当标签几乎没信息</td><td class="note">每题只有约 2 个 GT 帧，召回率只取 0、0.5、1 几个值，约 60% 的题换任何 λ 都一样，分类标签退化，所有方法结果一模一样</td><td class="note">改用 soft_topk 损失：直接让 GT 帧在融合分数里排得更靠前，不再依赖离散标签</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="prose"><span class="label">说明什么</span>这个任务的监督信号天生很稀疏，大量问题对 λ 不敏感。这一点贯穿后面所有结果。</p>
+</section>
+
+<section id="s2" class="card step">
+  <p class="when">第 2 步 · 9 月 10 日</p>
+  <h3>第一轮持续学习实验：学出来的 λ 反而不如固定 λ</h3>
+  <div class="prose stack">
+    <p><span class="label">做了什么</span>8 种方法 × 3 种顺序 × 3 个种子跑全网格。另外试了一个变体：每个任务只给一个“任务最佳 λ”当分类标签。</p>
+  </div>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>方法（9 次平均）</th><th>soft_topk 损失 ACC</th><th>FM</th><th>任务级标签 ACC</th><th>FM</th></tr></thead>
+      <tbody>
+        <tr><td>naive</td><td>0.514</td><td>0.045</td><td>0.568</td><td>0.030</td></tr>
+        <tr><td>EWC</td><td>0.519</td><td>0.033</td><td>0.568</td><td>0.030</td></tr>
+        <tr><td>LwF</td><td>0.512</td><td>0.042</td><td>0.568</td><td>0.010</td></tr>
+        <tr><td>ER</td><td>0.531</td><td>0.022</td><td>0.591</td><td>0.007</td></tr>
+        <tr><td>joint</td><td>0.528</td><td>0.013</td><td>0.596</td><td>0.002</td></tr>
+        <tr><td>固定 λ=0.3</td><td>0.564</td><td>0</td><td>0.564</td><td>0</td></tr>
+        <tr><td>oracle</td><td>0.673</td><td>0</td><td class="note">（任务级上限 0.584）</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose stack">
+    <p><span class="label">结果</span>用 soft_topk 学出来的 λ 全部比固定 0.3 低 3 到 5 个点。任务级标签的版本里 ER 和 joint 能超过固定 λ，但它只能学到“每个任务一个 λ”。</p>
+    <p><span class="label">说明什么</span>防遗忘方法确实降低了遗忘（naive 0.045 → joint 0.013），但学出来的 λ 本身是坏的，先得搞清楚为什么。</p>
+  </div>
+  <p class="meta">注：这一步和第 3、4 步用的都是旧的 GT 帧率换算（第 5 步才发现并修正），所以绝对数值和第 6 步不能直接比，只能看各方法之间的相对关系。</p>
+</section>
+
+<section id="s3" class="card step">
+  <p class="when">第 3 步 · 10 月 14 日</p>
+  <h3>诊断：问题出在“训练时和评测时取 λ 的方式不一样”</h3>
+  <div class="prose stack">
+    <p><span class="label">做了什么</span>做了三个诊断：（1）常数 λ 能达到多少；（2）soft_topk 这个训练目标本身对不对；（3）同一个预测头换一种取 λ 的方式结果如何。</p>
+    <p><span class="label">结果</span>训练目标本身没问题：如果每题都取让训练目标最优的 λ，召回率能到 0.591，比固定 0.3 的 0.567 高。问题在评测：训练时用的是“11 个候选 λ 按概率加权的平均值”，评测时却取“概率最大的那一个”。模型把概率分在 λ=0 和 λ=1 两头，加权平均是合理的中间值，取最大值却落到最差的两个极端。</p>
+  </div>
+  <figure>
+    <img src="figs/f06_diagnosis.png" alt="常数 λ 召回率曲线，以及任务常数、oracle、学习头两种解码方式的水平参考线" loading="lazy">
+    <figcaption><b>图 1</b>　诊断：常数 λ 的召回率曲线（旧 GT），以及几个参照水平。每任务最佳常数只比固定 λ 高约 1 个点，oracle 高约 10 个点，说明可提升空间主要来自“每道题不同”，不是“每类题不同”。<span class="chip int">仅供内部判断</span></figcaption>
+  </figure>
+  <figure>
+    <img src="figs/f05_decode.png" alt="左：解码修正前后各方法 ACC 柱状图；右：同一预测头两种解码方式下预测 λ 的分布" loading="lazy">
+    <figcaption><b>图 2</b>　(a) 修正解码方式前后的持续学习 ACC；(b) 同一个预测头：取概率最大值时 λ 集中在 0 和 1，取加权平均时分布正常。<span class="chip app">建议放附录</span>（作为“实现细节很关键”的例子）</figcaption>
+  </figure>
+  <div class="prose stack">
+    <p><span class="label">修正后</span>评测改成加权平均后重跑（v2）：各方法 ACC 从 0.51 到 0.53 升到 0.56 到 0.575，和固定 λ（0.564）基本持平。</p>
+    <p><span class="label">说明什么</span>bug 修好了，但学出来的 λ 只是追平固定 λ。原因是 69% 的测试题换任何 λ 都一样，而现有输入特征（问题向量 + 10 个曲线统计量）预测不出剩下那部分题该用什么 λ。</p>
+  </div>
+</section>
+
+<section id="s4" class="card step">
+  <p class="when">第 4 步 · 10 月 21 日</p>
+  <h3>给预测头加“逐题特征”：开始稳定超过固定 λ</h3>
+  <div class="prose stack">
+    <p><span class="label">做了什么</span>新设计了 44 维特征，全部只从两条分数曲线算，不用任何标注。包括：每条曲线的形状（峰的数量、头部占比等）、两条曲线一致不一致、换 λ 时 top-8 变化有多大、不同 λ 选出的帧之间是否互相认同。先在非持续学习的设置下比较不同输入组合。</p>
+  </div>
+  <figure>
+    <img src="figs/f07_features.png" alt="不同输入特征组合下预测头的测试召回率横向柱状图" loading="lazy">
+    <figcaption><b>图 3</b>　哪些输入能帮预测头选 λ（旧 GT，所有任务一起训练，3 次划分的均值 ± 标准差）。768 维问题向量反而让结果变差（过拟合）；10 个统计量 + 44 维逐题特征最好。不训练的“共识投票”规则和梯度提升树都不如它。<span class="chip app">建议放附录</span>（特征消融）</figcaption>
+  </figure>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>方法（9 次平均，旧 GT）</th><th>v2 原特征 ACC</th><th>v3 新特征 ACC</th><th>FM</th><th>比固定 λ 高的次数</th><th>比调好的单一常数高</th></tr></thead>
+      <tbody>
+        <tr><td>naive</td><td>0.560</td><td>0.578</td><td>0.028</td><td>9/9</td><td>+0.5（7/9）</td></tr>
+        <tr><td>EWC</td><td>0.568</td><td>0.587</td><td>0.017</td><td>9/9</td><td>+1.3（9/9）</td></tr>
+        <tr class="hl"><td>LwF</td><td>0.567</td><td>0.589</td><td>0.016</td><td>9/9</td><td>+1.5（8/9）</td></tr>
+        <tr><td>ER</td><td>0.565</td><td>0.585</td><td>0.019</td><td>9/9</td><td>+1.1（8/9）</td></tr>
+        <tr><td>joint</td><td>0.575</td><td>0.589</td><td>0.018</td><td>9/9</td><td>+1.5（9/9）</td></tr>
+        <tr><td>固定 λ=0.3 / 单一常数 / 每任务常数</td><td colspan="2">0.564 / 0.574 / 0.584</td><td>0</td><td></td><td></td></tr>
+        <tr><td>oracle</td><td colspan="2">0.673</td><td>0</td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="prose stack">
+    <p><span class="label">结果</span>所有方法 9 次全部超过固定 λ，也超过调好的单一常数约 1 到 1.5 个点，LwF 和 joint 还略高于“每任务一个常数”。EWC 和 LwF 的遗忘比 naive 少约 1.1 个点（8/9 和 7/9 次）。</p>
+    <p><span class="label">说明什么</span>逐题特征抓到了一部分“这道题该偏哪边”的信息。不过离 oracle 还差约 8 个点，大部分逐题差异仍然预测不出来。</p>
+  </div>
+</section>
+
+<section id="s5" class="card step twist">
+  <p class="when">第 5 步 · 10 月 21 日</p>
+  <h3>准备下游问答时发现：GT 关键帧一直按错误的帧率在换算</h3>
+  <div class="prose stack">
+    <p><span class="label">发现</span>LongVideoBench 的 GT 关键帧是按固定 24 fps 计的帧号，而我们一直用视频的真实帧率（中位数 30 fps）换算成秒。对大多数视频来说，GT 被放到了比实际更早的位置，视频越长偏得越多。</p>
+    <p><span class="label">怎么确认的</span>找了 39 道答案出现在字幕里、视频又不是 24 fps 的题，看 GT 时间和答案字幕出现的时间差多少。</p>
+  </div>
+  <figure>
+    <img src="figs/f08_gtfix.png" alt="左：两种帧率假设下 GT 落在答案字幕 5 秒内的比例；右：修正前后常数 λ 召回率曲线" loading="lazy">
+    <figcaption><b>图 4</b>　(a) 按 24 fps 换算，38/39 的 GT 落在答案字幕 5 秒内；按真实帧率只有 14/39。(b) 修正后常数 λ 曲线整体抬高，最佳点从 0.5 到 0.6 移到 0.7 左右。<span class="chip app">建议放附录</span>（数据说明，也可以写成一句脚注）</figcaption>
+  </figure>
+  <div class="prose stack">
+    <p><span class="label">修正后重新看前提</span>用正确的 GT 在全部 753 题上重新检验“文本类题需要更高 λ”：</p>
+  </div>
+  <figure>
+    <img src="figs/f02_headroom.png" alt="左：四个任务和整体的召回率随常数 λ 变化曲线；右：各任务中 λ 不影响结果的题目占比" loading="lazy">
+    <figcaption><b>图 5</b>　(a) 修正 GT 后各任务召回率随 λ 的变化：T1、T3 文本类在 λ=0.8 到 0.9 最好，T2、T4 视觉类在 0.3 或更低最好。T1 上 λ 从 0.3 调到 0.8，召回率从 0.73 升到 0.88。(b) 各任务中换任何 λ 都不影响结果的题目占比（53% 到 74%）。<span class="chip main">建议放正文</span>（这是“为什么要学 λ”的核心动机图）</figcaption>
+  </figure>
+  <figure>
+    <img src="figs/f03_premise.png" alt="文本类与视觉类题目各自最佳 λ 的分布直方图" loading="lazy">
+    <figcaption><b>图 6</b>　每道题的最佳 λ（只统计对 λ 敏感的 284 题）：文本类平均 0.62，视觉类平均 0.49，Mann-Whitney 单侧检验 p = 1.6×10⁻⁶。<span class="chip main">建议放正文</span>（和图 5 二选一，或合成一张）</figcaption>
+  </figure>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>全部 753 题</th><th>修正前</th><th>修正后</th></tr></thead>
+      <tbody>
+        <tr><td>固定 λ=0.3 召回率</td><td>0.553</td><td>0.588</td></tr>
+        <tr><td>最佳单一常数</td><td>0.561（λ≈0.6）</td><td>0.617（λ=0.7）</td></tr>
+        <tr><td>oracle（每题最佳）</td><td>0.654</td><td>0.712</td></tr>
+        <tr><td>λ 不影响结果的题目占比</td><td>67%</td><td>62%</td></tr>
+        <tr><td>文本类 / 视觉类最佳 λ 均值</td><td>0.59 / 0.48（p = 1.8×10⁻⁴）</td><td>0.62 / 0.49（p = 1.6×10⁻⁶）</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="prose"><span class="label">说明什么</span>前提在修正前其实也成立（之前“不显著”的结论来自 204 题的小样本），修正后更明显。同时 VSI 默认的 0.3 在正确 GT 下明显偏低。之前的 v2、v3 结果都要以修正后的 v4 为准。</p>
+</section>
+
+<section id="s6" class="card step">
+  <p class="when">第 6 步 · 10 月 21 日（11 月 6 日补充了公平对照）</p>
+  <h3>修正 GT 后重跑：比 λ=0.3 好很多，但和调好的常数差不多</h3>
+  <div class="prose stack">
+    <p><span class="label">做了什么</span>用 v3 的配置（逐题特征 + 标准化）在修正后的 GT 上重跑全网格（v4）。写报告时我额外补算了两个更公平的参照：在训练集上调出的单一常数 λ，和每个任务各自调一个常数（这个需要知道题目属于哪个任务）。</p>
+  </div>
+  <figure>
+    <img src="figs/f09_v4_main.png" alt="左：v4 各方法最终 ACC 柱状图及四条参照线；右：各方法遗忘量柱状图" loading="lazy">
+    <figcaption><b>图 7</b>　v4 主结果。(a) 最终 ACC 与参照水平；(b) 遗忘量 FM。误差棒是 9 次运行的标准差。<span class="chip main">建议放正文</span>（主结果图）</figcaption>
+  </figure>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>方法（9 次）</th><th>ACC</th><th>FM</th><th>比 λ=0.3</th><th>比调好的单一常数</th><th>遗忘少于 naive</th></tr></thead>
+      <tbody>
+        <tr><td>naive</td><td>0.656 ± 0.013</td><td>0.029 ± 0.020</td><td class="pos">+3.9（9/9）</td><td class="neg">−0.7（3/9）</td><td>—</td></tr>
+        <tr><td>EWC</td><td>0.662 ± 0.011</td><td>0.023 ± 0.019</td><td class="pos">+4.5（9/9）</td><td>−0.1（4/9）</td><td>6/9</td></tr>
+        <tr class="hl"><td>LwF</td><td>0.668 ± 0.009</td><td>0.015 ± 0.016</td><td class="pos">+5.1（9/9）</td><td class="pos">+0.6（7/9）</td><td>6/9</td></tr>
+        <tr><td>ER</td><td>0.660 ± 0.007</td><td>0.021 ± 0.013</td><td class="pos">+4.3（9/9）</td><td>−0.3（4/9）</td><td>7/9</td></tr>
+        <tr class="hl"><td>joint（参考上限）</td><td>0.668 ± 0.007</td><td>0.015 ± 0.009</td><td class="pos">+5.2（9/9）</td><td class="pos">+0.6（6/9）</td><td>6/9</td></tr>
+        <tr><td>kNN</td><td>0.645 ± 0.010</td><td>0.005</td><td class="pos">+2.9（9/9）</td><td class="neg">−1.7（0/9）</td><td>7/9</td></tr>
+        <tr><td>固定 λ=0.3</td><td>0.617</td><td>0</td><td colspan="3" class="note"></td></tr>
+        <tr><td>单一常数（训练集调，多数为 0.7）</td><td>0.662</td><td>0</td><td colspan="3" class="note">不需要任何学习，只要调一个数</td></tr>
+        <tr><td>每任务一个常数</td><td>0.677</td><td>0</td><td colspan="3" class="note">需要知道题目类型；T1 0.8 / T2 0.3 / T3 0.8 / T4 0.0（种子 0）</td></tr>
+        <tr><td>oracle</td><td>0.765</td><td>0</td><td colspan="3" class="note">每题用最好的 λ，天花板</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <img src="figs/f10_paired.png" alt="每次运行相对 λ=0.3 和相对调好单一常数的 ACC 提升散点图" loading="lazy">
+    <figcaption><b>图 8</b>　逐次配对比较，每个点是一种顺序 × 一个种子，数字是 9 次中更好的次数。(a) 相对 λ=0.3 全部为正；(b) 相对调好的单一常数基本在 0 附近。<span class="chip main">建议放正文</span>（(b) 是诚实的比较，审稿人一定会问）</figcaption>
+  </figure>
+  <figure>
+    <img src="figs/f12_lambda_rounds.png" alt="naive 与 LwF 在每学完一个任务后，对四个任务预测的平均 λ 折线图" loading="lazy">
+    <figcaption><b>图 9</b>　每学完一个任务后，预测头给 4 个任务输出的平均 λ（default 顺序，3 个种子平均）。右侧三角是各任务的最佳常数。四条线几乎重合：预测头没有给文本类更高、视觉类更低的 λ，而是整体往 0.6 左右移。naive 学完 T2 后整体掉到 0.55，LwF 更稳定。<span class="chip main">建议放正文</span>（解释了“为什么只追平调好的常数”，也是最直观的遗忘图）</figcaption>
+  </figure>
+  <figure>
+    <img src="figs/f11_matrix.png" alt="naive、LwF、joint 三种方法的 4×4 召回率矩阵热力图" loading="lazy">
+    <figcaption><b>图 10</b>　召回率矩阵：第 i 行是学完第 i 个任务后，在每个任务测试集上的召回率（default 顺序，3 个种子平均）。持续学习论文里的常见图，但这里各行变化不大，信息量有限。<span class="chip app">建议放附录</span></figcaption>
+  </figure>
+  <div class="prose stack">
+    <p><span class="label">结果</span>相对 VSI 默认的 λ=0.3，所有方法 9 次全赢，提升约 4 到 5 个点。但相对“调好的单一常数”，最好的 LwF 和 joint 只高 0.6 个点，并且都低于“每任务一个常数”（0.677）。遗忘方面，LwF 和 joint 的遗忘量约为 naive 的一半，但只在 6/9 次运行里成立，波动和差值差不多大。</p>
+    <p><span class="label">说明什么</span>修正 GT 后，最大的收益来自把整体 λ 从 0.3 调到 0.6 到 0.7。图 9 显示预测头没有学会按任务区分 λ，所以它的效果接近一个调好的常数。这一点和旧 GT 下的 v3 不同：v3 里预测头比调好的常数高 1.5 个点。</p>
+  </div>
+</section>
+
+<section id="s7" class="card step">
+  <p class="when">第 7 步 · 10 月 21 日（11 月 6 日补充敏感题分析）</p>
+  <h3>下游问答：选帧变好，几乎没有变成答题变好</h3>
+  <div class="prose stack">
+    <p><span class="label">做了什么</span>用每种方法选出的 8 帧，加上每帧当时的字幕，让 Qwen3-VL-8B-Instruct 回答多选题，比较正确率。学出来的预测头只在它自己种子的测试题上评估（每个种子 229 题），和固定 λ 在同一批题上配对比较。共调用模型 3482 次（不同方法选出相同帧时只调用一次）。</p>
+  </div>
+  <figure>
+    <img src="figs/f14_qa.png" alt="左：各选帧方式的问答正确率；右：按任务拆分的问答正确率" loading="lazy">
+    <figcaption><b>图 11</b>　(a) 全部 753 题上不同选帧方式的问答正确率；(b) 按任务拆分。λ=0.3 本身就接近最好，oracle 只多 1.8 个点。<span class="chip main">建议放正文</span>（(a)）；(b) <span class="chip app">建议放附录</span></figcaption>
+  </figure>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>方法</th><th>问答正确率</th><th>对比 λ=0.3（同一批题）</th></tr></thead>
+      <tbody>
+        <tr><td>均匀采样 8 帧</td><td>0.615</td><td></td></tr>
+        <tr><td>λ=0（只看画面）</td><td>0.604</td><td></td></tr>
+        <tr><td>λ=0.3（VSI 默认）</td><td>0.631</td><td></td></tr>
+        <tr><td>λ=0.7（召回率最高的常数）</td><td>0.627</td><td></td></tr>
+        <tr><td>λ=1（只看字幕）</td><td>0.615</td><td></td></tr>
+        <tr><td>oracle λ</td><td>0.649</td><td></td></tr>
+        <tr class="hl"><td>LwF 预测头（3×229 题）</td><td>0.652</td><td>+0.4，95% 区间 [−1.5, +2.3]，McNemar p = 0.77</td></tr>
+        <tr><td>naive 预测头（3×229 题）</td><td>0.643</td><td>−0.4，95% 区间 [−2.3, +1.5]，p = 0.76</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <figure>
+    <img src="figs/f15_qa_recall.png" alt="左：按 λ=0.3 时召回率分组的问答正确率；右：λ 敏感题与不敏感题上各方法问答正确率" loading="lazy">
+    <figcaption><b>图 12</b>　(a) λ=0.3 时，选中的 8 帧一个 GT 都没命中的题正确率 0.49，全部命中的 0.75。(b) 把题分成“换 λ 选帧会变”的 284 题和“不会变”的 469 题：在敏感题上 oracle λ 比 λ=0.3 多答对 5 个点，在不敏感题上所有方法一样。<span class="chip main">建议放正文</span>（解释“为什么全量看不出差别”）</figcaption>
+  </figure>
+  <div class="prose stack">
+    <p><span class="label">结果</span>全量上学出来的 λ 和固定 λ 打平。在 284 道敏感题中，LwF 预测头的测试题有 266 道，它比 λ=0.3 高 1.5 个点（0.647 对 0.632），区间 [−2.3, +5.6]，仍然不显著。</p>
+    <p><span class="label">说明什么</span>命中关键帧对答题确实重要（0.49 对 0.75），λ 在敏感题上也确实能带来 5 个点。但只有约 38% 的题对 λ 敏感，被稀释后全量差别很小。另外选帧召回率最高的 λ=0.7 问答反而略低于 0.3，说明 recall@8 只是答题效果的粗略代理指标。</p>
+  </div>
+</section>
+
+<section id="review" class="card">
+  <h2>全程回顾</h2>
+  <figure>
+    <img src="figs/f13_progression.png" alt="四轮修正中各方法相对固定 λ 的提升，以及 oracle、单一常数、每任务常数三条参照线" loading="lazy">
+    <figcaption><b>图 13</b>　四轮修正中，各方法相对固定 λ=0.3 的提升（单位：百分点），以及三条参照线。前三轮用旧 GT，第四轮用修正后的 GT；数值是相对固定 λ 的差，可以跨轮比较走势。<span class="chip int">仅供内部判断</span>（适合组会讲故事，不适合论文）</figcaption>
+  </figure>
+</section>
+
+<section id="findings" class="card">
+  <h2>发现总结</h2>
+  <ul class="find prose">
+    <li><b>λ 确实应该随问题类型变。</b>文本类题偏字幕、视觉类题偏画面，统计上非常显著；按任务给常数也比一刀切好约 6 个点（相对 λ=0.3）。这是项目最扎实的结论。</li>
+    <li><b>可提升空间大部分在“每道题”，不在“每类题”。</b>oracle 比每任务常数还高约 9 个点，但 53% 到 74% 的题对 λ 不敏感，监督信号很稀疏。</li>
+    <li><b>学出来的 λ 稳定好于 VSI 默认值，但还没有超过“调好的常数”。</b>修正 GT 后，预测头的收益主要是把整体 λ 往上调；它没有学会按任务区分，也低于每任务常数。旧 GT 下逐题特征曾带来约 1.5 个点的真实提升，修正后缩小到约 0.6 个点。</li>
+    <li><b>防遗忘方法有效果但证据弱。</b>LwF、joint 的遗忘量约减半，但 9 次里只有 6 次成立。遗忘本身也不大（naive 才 0.029），因为 4 个任务学到的 λ 很接近，彼此冲突不强。</li>
+    <li><b>选帧变好不等于答题变好。</b>下游问答上学出来的 λ 和 λ=0.3 打平；只有在对 λ 敏感的少数题上，λ 才有约 5 个点的作用空间。</li>
+    <li><b>工程教训。</b>四个 bug 都是“能跑完但结果是错的”：坐标系、静默丢样本、训练与评测不一致、标注帧率。每一个都曾让结论反转。</li>
+  </ul>
+  <h3>局限</h3>
+  <ul class="find prose">
+    <li>每个视频只用了 1 道题，共 753 题，测试集每个种子只有约 229 题，下游问答的统计功效不够。</li>
+    <li>recall@8 很粗：每题平均只有约 2 个 GT 帧，召回率只取几个离散值。</li>
+    <li>下游只用了一个 VLM（Qwen3-VL-8B）和一种提示格式。</li>
+    <li>任务顺序只有 3 种，任务数只有 4 个，持续学习的“流”很短。</li>
+  </ul>
+  <h3>写论文时可选的主线</h3>
+  <ul class="find prose">
+    <li><b>主线 A（偏分析，我推荐）：</b>“λ 该不该随问题变、能不能持续学”。正文放图 5/6（前提）、图 7/8（主结果，含公平对照）、图 9（预测头没有区分任务）、图 12（下游）。结论如实写：任务相关性很强，现有的持续学习预测头只追平调好的常数，指出逐题差异和稀疏监督是瓶颈。</li>
+    <li><b>主线 B（偏方法）：</b>如果想要“方法有效”的故事，需要先补实验，让预测头真正利用任务差异。例如把任务编号或任务原型当输入，或者用每任务常数做初始化再学逐题的修正，目标是超过 0.677。这需要再做一轮。</li>
+  </ul>
+</section>
+
+<section id="figlist" class="card">
+  <h2>图表清单</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>编号</th><th>内容</th><th>建议</th><th>文件</th></tr></thead>
+      <tbody>
+        <tr><td>图 1</td><td class="note">诊断：常数 λ 曲线与参照（旧 GT）</td><td><span class="chip int">内部</span></td><td><code>f06_diagnosis</code></td></tr>
+        <tr><td>图 2</td><td class="note">解码修正前后对比</td><td><span class="chip app">附录</span></td><td><code>f05_decode</code></td></tr>
+        <tr><td>图 3</td><td class="note">输入特征消融</td><td><span class="chip app">附录</span></td><td><code>f07_features</code></td></tr>
+        <tr><td>图 4</td><td class="note">GT 帧率验证与修正前后曲线</td><td><span class="chip app">附录</span></td><td><code>f08_gtfix</code></td></tr>
+        <tr><td>图 5</td><td class="note">各任务召回率随 λ 变化 + 不敏感题占比</td><td><span class="chip main">正文</span></td><td><code>f02_headroom</code></td></tr>
+        <tr><td>图 6</td><td class="note">文本类 vs 视觉类最佳 λ 分布</td><td><span class="chip main">正文</span></td><td><code>f03_premise</code></td></tr>
+        <tr><td>图 7</td><td class="note">v4 主结果 ACC 与 FM</td><td><span class="chip main">正文</span></td><td><code>f09_v4_main</code></td></tr>
+        <tr><td>图 8</td><td class="note">逐次配对：相对 λ=0.3 与调好常数</td><td><span class="chip main">正文</span></td><td><code>f10_paired</code></td></tr>
+        <tr><td>图 9</td><td class="note">每轮后各任务的预测 λ</td><td><span class="chip main">正文</span></td><td><code>f12_lambda_rounds</code></td></tr>
+        <tr><td>图 10</td><td class="note">召回率矩阵热力图</td><td><span class="chip app">附录</span></td><td><code>f11_matrix</code></td></tr>
+        <tr><td>图 11</td><td class="note">下游问答正确率（全量、按任务）</td><td><span class="chip main">正文</span> / <span class="chip app">附录</span></td><td><code>f14_qa</code></td></tr>
+        <tr><td>图 12</td><td class="note">召回率与问答的关系、敏感题子集</td><td><span class="chip main">正文</span></td><td><code>f15_qa_recall</code></td></tr>
+        <tr><td>图 13</td><td class="note">四轮修正全程回顾</td><td><span class="chip int">内部</span></td><td><code>f13_progression</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="meta">所有图由 <code>report/make_figures.py</code> 从仓库里的结果文件重新生成，数字汇总在 <code>report/numbers.json</code>。</p>
+</section>
+
+</main>
+</body>
+</html>

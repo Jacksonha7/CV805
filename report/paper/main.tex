@@ -1,0 +1,511 @@
+% CV805 course project report, CVPR 2027 author kit (github.com/cvpr-org/author-kit)
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage[pagenumbers]{cvpr}
+\input{preamble}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{placeins}
+\setcounter{dbltopnumber}{2}
+\renewcommand{\dbltopfraction}{0.8}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\dblfloatpagefraction}{0.7}
+
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+
+\def\confName{CVPR}
+\def\confYear{2027}
+
+\newcommand{\lam}{\lambda}
+\newcommand{\figdir}{../figs}
+
+\title{Should the Fusion Weight Change with the Question?\\
+A Study of Continually Learned Fusion Weights for Keyframe Search}
+
+\author{Jianxiang He\\
+CV805 Course Project\\
+{\tt\small jianxiang.he971@gmail.com}
+}
+
+\begin{document}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+To answer a question about a long video, a vision-language model can only look at a few frames, so we first have to pick the right ones.
+VSI picks frames with two signals: what objects appear in each frame, and how well the subtitle at that moment matches the question.
+It adds the two scores with one fixed weight $\lam$.
+We ask whether this weight should change with the type of question, and whether a small model can learn it when question types arrive one after another (continual learning).
+On LongVideoBench we split 753 questions into four question types and train a small $\lam$ predictor on them in sequence.
+We find three things.
+First, the best weight clearly depends on the question type: questions about subtitles prefer a large $\lam$ (mean 0.62) and questions about visual content prefer a small one (mean 0.49, $p=1.6\times10^{-6}$).
+Second, the learned predictor beats the default $\lam=0.3$ by about 5 points of keyframe recall in all 9 runs, but it only ties a single $\lam$ tuned on the training set, because it outputs almost the same $\lam$ for every question type.
+Third, better keyframe recall barely improves question answering, except on the 38\% of questions where $\lam$ actually changes the selected frames.
+Our results suggest that a well-tuned constant is the baseline any learned weight must beat, and that predicting the per-question differences is the real open problem.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:intro}
+
+A long video can last tens of minutes, but a vision-language model (VLM) can only take a few frames as input.
+Which frames we give it often decides whether it answers correctly.
+Recent \emph{keyframe search} methods therefore look for the frames that are most related to the question before calling the VLM~\cite{ye2025tstar,tang2025aks,liu2025bolt}.
+
+VSI~\cite{he2025vsi} is one such method.
+For every second of the video it computes two scores (\cref{fig:teaser}).
+The \emph{visual score} checks whether the objects mentioned in the question appear in the frame, using the open-vocabulary detector YOLO-World~\cite{cheng2024yoloworld}.
+The \emph{subtitle score} measures how similar the subtitle at that second is to the question, using sentence embeddings~\cite{reimers2019sbert}.
+VSI then adds the two scores with a weight $\lam$ and keeps the 8 highest-scoring seconds:
+\begin{equation}
+  S_\lam(t) = (1-\lam)\, \hat{s}_{\text{vis}}(t) + \lam\, \hat{s}_{\text{sub}}(t),
+  \label{eq:fuse}
+\end{equation}
+where $\hat{s}$ means the score rescaled to $[0,1]$.
+$\lam=0$ uses only the visual score and $\lam=1$ uses only the subtitles.
+VSI uses $\lam=0.3$ for every question.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{\figdir/f01_teaser.pdf}
+  \caption{\textbf{Why the weight matters.} One real question from LongVideoBench (``\ldots when the spoon places the meat onto the mashed potatoes and the subtitle mentions `Just pour the\ldots'\,''). Top: the two scores over time; the green band is the annotated moment. Bottom: the 8 seconds selected with the default $\lam=0.3$ all miss that moment, while $\lam=0.8$ puts most of them on it.}
+  \label{fig:teaser}
+\end{figure}
+
+A single weight for all questions seems too simple.
+A question about what is \emph{said} should rely more on subtitles; a question about what is \emph{shown} should rely more on the picture.
+\Cref{fig:teaser} shows a real case where changing $\lam$ from 0.3 to 0.8 turns a complete miss into a hit.
+A natural idea is to train a small model that looks at each question and outputs its own $\lam$.
+In practice, new types of questions keep appearing, so this model should be able to learn new question types one after another without forgetting the old ones.
+This setting is called \emph{continual learning}~\cite{delange2021survey,wang2024survey}.
+
+This report studies four questions:
+\begin{itemize}
+  \item \textbf{Q1.} Does the best $\lam$ really depend on the question type? How much can we gain, and where does the gain come from?
+  \item \textbf{Q2.} Can a $\lam$ predictor trained on question types in sequence learn it? Does it forget?
+  \item \textbf{Q3.} If the gain is small, what is holding it back?
+  \item \textbf{Q4.} Do better selected frames lead to better answers?
+\end{itemize}
+
+Our contributions are:
+\textbf{(1)} We turn VSI's fusion weight into a continual learning task on LongVideoBench~\cite{wu2024longvideobench}, with four question types, three task orders and three random seeds, and with fair baselines, including a constant tuned on the training set.
+\textbf{(2)} We show that the best weight depends strongly on the question type, and we split the possible gain into three parts: a better global constant, one constant per question type, and one weight per question (\cref{fig:decomp}).
+\textbf{(3)} We find that the learned predictor only matches a tuned constant, because it gives nearly the same $\lam$ to all question types (\cref{fig:rounds}).
+\textbf{(4)} We test the selected frames with a real VLM and find that a better $\lam$ only helps the minority of questions where $\lam$ changes the frames.
+We also describe four implementation mistakes that each reversed our conclusions during the project (\cref{sec:pitfalls}).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Keyframe selection for long videos.}
+Sampling frames at even intervals can miss short but important moments.
+T*~\cite{ye2025tstar} treats frame selection as a search over time guided by an object detector.
+AKS~\cite{tang2025aks} and BOLT~\cite{liu2025bolt} select frames by their relevance to the question without training the VLM.
+VSI~\cite{he2025vsi} adds a subtitle signal to T* and mixes the two signals with a fixed weight.
+These methods usually keep their mixing or sampling settings fixed for all questions; we study whether the mixing weight itself should adapt.
+
+\paragraph{Adaptive fusion of modalities.}
+Dynamic fusion methods change how much each modality contributes depending on the input~\cite{xue2023dynamic}.
+In VSI both branches are fixed, off-the-shelf models and the only thing to learn is one number, $\lam$.
+This makes it easy to measure exactly how much learning the weight is worth.
+
+\paragraph{Continual learning.}
+When a model is trained on tasks one after another, it tends to lose what it learned on earlier tasks; this is called forgetting.
+Common remedies keep important weights close to their old values (EWC~\cite{kirkpatrick2017ewc}), make the new model imitate the old model's outputs (LwF~\cite{li2016lwf}), or replay a few stored examples from old tasks (ER~\cite{chaudhry2019tiny}).
+Results are usually reported as the final average accuracy and the amount of forgetting~\cite{lopezpaz2017gem,chaudhry2018rwalk}.
+Most prior work studies classification with many classes; here the output is a single number and the training signal is sparse, which lets us look directly at what the model learns and forgets.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Setup}
+\label{sec:setup}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{\figdir/f02_headroom.pdf}
+  \caption{\textbf{The best weight depends on the question type.} (a) Recall@8 of every task as a function of a constant $\lam$. Text tasks (blue) peak at $\lam=0.8$--$0.9$; visual tasks (orange) peak at $\lam\le0.3$. The dashed line is the VSI default. (b) Share of questions whose recall does not change at all with $\lam$.}
+  \label{fig:headroom}
+\end{figure*}
+
+\paragraph{Data and question types.}
+We use the validation set of LongVideoBench~\cite{wu2024longvideobench} and take one question per video, 753 questions in total.
+Using the official question categories, we group them into four tasks:
+T1 text perception (127 questions, \eg ``which subtitle appears when\ldots''),
+T2 visual perception (237),
+T3 text relation (171), and
+T4 visual relation (218).
+Each task is split randomly into 70\% training and 30\% test questions.
+We use three random splits (seeds) and three task orders: default T1$\to$T2$\to$T3$\to$T4, grouped T1$\to$T3$\to$T2$\to$T4, and random T3$\to$T1$\to$T2$\to$T4.
+Every method is therefore run $3\times3=9$ times.
+We compute the two VSI scores once with the official code and store them, so all training runs take minutes on a CPU.
+
+\paragraph{How we measure frame selection.}
+Each question comes with annotated moments (on average about two).
+\emph{Recall@8} is the fraction of these moments that have at least one of the 8 selected seconds within $\pm5$ seconds.
+For each question, recall can be computed for any $\lam$ on a grid $\{0, 0.1, \dots, 1\}$.
+
+\paragraph{The $\lam$ predictor.}
+The predictor is a small two-layer network (54 inputs, 128 hidden units, 11 outputs).
+Its 11 outputs are probabilities for the 11 grid values of $\lam$, and the weight it uses is the probability-weighted average.
+Its 54 inputs are computed only from the two score curves, without any annotation:
+10 basic statistics of the curves, plus 44 features that describe each curve's shape, whether the two curves agree, and how much the top-8 frames change when $\lam$ changes.
+Inputs are standardized with statistics from the first task only, so no information leaks from later tasks.
+
+\paragraph{Training signal.}
+For about 60\% of the questions, recall does not change at all with $\lam$, and for the rest it takes only a few values.
+Using ``the best $\lam$'' of each question as a class label therefore gives almost no signal.
+Instead, we train the predictor to rank the annotated seconds high in the fused curve.
+With $\bar\lam$ the predicted weight and $\tau=0.1$:
+\begin{equation}
+  \mathcal{L} = -\log \sum_{t\in\text{GT}} \operatorname{softmax}\!\big(S_{\bar\lam}/\tau\big)_t .
+\end{equation}
+Each task is trained for 50 epochs with Adam (learning rate $10^{-3}$, batch size 64).
+
+\paragraph{Continual learning methods.}
+\emph{Naive} simply continues training on each new task.
+\emph{EWC}~\cite{kirkpatrick2017ewc} penalizes changes to weights that were important for old tasks.
+\emph{LwF}~\cite{li2016lwf} asks the model to keep its old outputs on new data.
+\emph{ER}~\cite{chaudhry2019tiny} replays up to 200 stored old questions.
+\emph{Joint} retrains on all tasks seen so far; it is not a continual method but a reference upper bound.
+\emph{kNN} stores all seen questions and copies the best $\lam$ of the 5 most similar ones.
+
+\paragraph{Baselines.}
+We compare against four constants and limits:
+the VSI default $\lam=0.3$;
+\emph{one tuned $\lam$}, the single value with the best average training recall (usually 0.7);
+\emph{one $\lam$ per task}, tuned on each task's training questions (this needs to know the question type);
+and the \emph{oracle}, which picks the best $\lam$ for each test question using its annotation, as an upper limit.
+
+\paragraph{Metrics.}
+Let $R_{i,j}$ be the test recall on task $j$ after training on the $i$-th task, with $T=4$ tasks.
+The final accuracy is $\text{ACC}=\frac{1}{T}\sum_j R_{T,j}$.
+Forgetting is $\text{FM}=\frac{1}{T-1}\sum_{j<T}\big(\max_{i<T} R_{i,j}-R_{T,j}\big)$, \ie how far each old task has dropped from its best value; lower is better.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Q1: Should the Weight Depend on the Question?}
+\label{sec:q1}
+
+
+
+
+
+
+
+\paragraph{Different tasks want different weights.}
+\Cref{fig:headroom}a shows recall for every constant $\lam$.
+The two text tasks are best at $\lam=0.8$ to $0.9$, while the two visual tasks are best at $\lam=0.3$ or lower.
+The difference is largest for T1: moving $\lam$ from 0.3 to 0.8 raises its recall from 0.73 to 0.88.
+Over all 753 questions, the best single value is $\lam=0.7$ (recall 0.617), about 3 points above the default 0.3 (0.588).
+So the default is too low for this dataset.
+
+\paragraph{The same holds question by question.}
+For the 284 questions where $\lam$ matters, we take the middle of each question's best-$\lam$ range.
+Its mean is 0.62 for text questions and 0.49 for visual questions (one-sided Mann-Whitney test, $p=1.6\times10^{-6}$; \cref{fig:premise}).
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{\figdir/f03_premise.pdf}
+  \caption{\textbf{Best weight per question.} For the 284 questions where $\lam$ matters, the best $\lam$ of text questions (blue) is clearly higher than that of visual questions (orange).}
+  \label{fig:premise}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{\figdir/f16_decomp.pdf}
+  \caption{\textbf{Where the possible gain is.} Final accuracy (ACC) when going from the default weight to one tuned constant, to one constant per task, and to the best weight for every question. Dashed lines: two learned predictors. Mean of 9 runs.}
+  \label{fig:decomp}
+\end{figure}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{\figdir/f10_paired.pdf}
+  \caption{\textbf{Run-by-run comparison.} Each dot is one task order and seed; the bar is the mean; the number above is how many of 9 runs are better. (a) Against the default $\lam=0.3$: always better. (b) Against one $\lam$ tuned on the training set: about even.}
+  \label{fig:paired}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{\figdir/f12_lambda_rounds.pdf}
+  \caption{\textbf{The predictor gives every task almost the same weight.} Mean predicted $\lam$ on each task's test questions after training on each task (default order, mean of 3 seeds). Triangles on the right mark the best constant of each task. The four lines nearly overlap, far from the task-specific targets.}
+  \label{fig:rounds}
+\end{figure*}
+
+\paragraph{Where is the room for improvement?}
+\Cref{fig:decomp} splits the gap between the default and the oracle into three steps.
+Tuning one global constant gains 4.5 points.
+Allowing one constant per task adds only 1.4 more.
+Choosing the best weight for every single question would add another 8.9.
+At the same time, 53\% to 74\% of the questions in each task do not react to $\lam$ at all (\cref{fig:headroom}b).
+In short, the question type matters in a statistical sense, but most of the remaining gain lies in per-question differences, and only a minority of questions carry any signal about them.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Q2 and Q3: What Does Continual Learning Learn?}
+\label{sec:q2}
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \begin{tabular}{lcccc}
+    \toprule
+    Method & ACC $\uparrow$ & FM $\downarrow$ & vs.\ 0.3 & vs.\ tuned \\
+    \midrule
+    Default $\lam=0.3$ (VSI) & 0.617 & -- & -- & -- \\
+    One tuned $\lam$ & 0.662 & -- & +4.5 & -- \\
+    One $\lam$ per task$^\dagger$ & 0.677 & -- & +6.0 & +1.4 \\
+    Oracle (per question)$^\ddagger$ & 0.765 & -- & +14.8 & +10.3 \\
+    \midrule
+    Naive & 0.656 & 0.029 & +3.9 & $-$0.7 (3/9) \\
+    EWC & 0.662 & 0.023 & +4.5 & $-$0.1 (4/9) \\
+    LwF & \textbf{0.668} & \textbf{0.015} & +5.1 & +0.6 (7/9) \\
+    ER & 0.660 & 0.021 & +4.3 & $-$0.3 (4/9) \\
+    Joint (reference) & \textbf{0.668} & \textbf{0.015} & +5.2 & +0.6 (6/9) \\
+    kNN & 0.645 & 0.005 & +2.9 & $-$1.7 (0/9) \\
+    \bottomrule
+  \end{tabular}
+  \caption{\textbf{Main results} (mean of 3 orders $\times$ 3 seeds). The last two columns give the ACC difference in points; in brackets, how many of the 9 runs beat the tuned constant. Standard deviations of ACC are 0.007--0.013. $^\dagger$Needs the question type. $^\ddagger$Uses test annotations; an upper limit only.}
+  \label{tab:main}
+\end{table}
+
+\begin{table*}[t]
+  \centering
+  \small
+  \begin{tabular}{p{0.17\linewidth}p{0.6\linewidth}p{0.17\linewidth}}
+    \toprule
+    Problem & What happened & Fix \\
+    \midrule
+    Frames vs.\ seconds & The annotations are frame numbers, but the score curves are indexed by seconds. Comparing them directly gave zero recall for 94\% of the questions. & Convert everything to seconds. \\
+    Annotation frame rate & LongVideoBench counts annotated frames at a fixed 24 fps, while the videos run at a median of 30 fps. Using the real frame rate moved the annotations too early. On 39 questions whose answer appears in a subtitle, 38 annotations fall within 5 s of that subtitle at 24 fps, but only 14 at the real frame rate (appendix, \cref{fig:gtfix}). & Always divide by 24. \\
+    Short videos dropped & VSI packs frames into a $4\times4$ grid; videos of 16 s or less cannot fill it and were silently skipped (197 questions, mostly text tasks). & Shrink the grid for short videos. \\
+    Training vs.\ testing the weight & Training used the probability-weighted average of $\lam$, but testing used the single most likely value. The model put its probability on $\lam=0$ and $\lam=1$, so testing picked the two worst weights, and learned weights looked 3--5 points worse than the default (appendix, \cref{fig:decode}). & Use the weighted average at test time too. \\
+    \bottomrule
+  \end{tabular}
+  \caption{Problems found and fixed during the project.}
+  \label{tab:pitfalls}
+\end{table*}
+
+\paragraph{Main result.}
+\Cref{tab:main} summarizes the 9 runs.
+Every learned method beats the default $\lam=0.3$, by 3.9 to 5.2 points, in every single run (\cref{fig:paired}a).
+However, compared with one constant tuned on the training set (0.662), only LwF and Joint are slightly better (+0.6 points, in 7 and 6 of 9 runs).
+Naive, EWC and ER are about equal to it, and kNN is worse.
+No method reaches one constant per task (0.677), and all are about 10 points below the oracle.
+
+
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.8\linewidth]{\figdir/f15_qa_recall.pdf}
+  \caption{\textbf{The weight only matters for some questions.} (a) QA accuracy at $\lam=0.3$, grouped by how many annotated moments the 8 frames hit. (b) QA accuracy on the 284 questions where $\lam$ changes the selected frames and on the 469 where it does not.}
+  \label{fig:qa}
+\end{figure*}
+
+\paragraph{Forgetting.}
+LwF and Joint forget about half as much as Naive (FM 0.015 vs.\ 0.029), with EWC and ER in between.
+But this holds in only 6 or 7 of the 9 runs, and the spread across runs is as large as the difference.
+We can only say that the anti-forgetting methods tend to forget less.
+Forgetting is also small for every method; the next paragraph explains why.
+
+
+
+\paragraph{Q3: the predictor learns one weight for everything.}
+\Cref{fig:rounds} shows the average $\lam$ the predictor gives to each task after each training stage.
+The four lines almost overlap.
+The predictor does \emph{not} give text tasks a larger weight and visual tasks a smaller one; it moves all questions to about 0.6, close to the tuned constant of 0.7.
+This explains \cref{tab:main}: the predictor captures the ``better global constant'' step of \cref{fig:decomp}, but not the ``per task'' or ``per question'' steps.
+It also explains why forgetting is small: since all tasks end up with similar weights, learning a new task does not overwrite much.
+We can still see forgetting in the figure: after training on T2 (visual perception), Naive drops all weights to 0.55 and moves back up after T3, while LwF changes much less.
+
+\paragraph{Why can it not learn the differences?}
+We see two reasons.
+First, the training signal is sparse: 62\% of the questions do not react to $\lam$, so almost all of the learning comes from the remaining third.
+Second, the inputs do not tell the predictor the question type; they only describe the score curves, which look similar across tasks.
+Adding the 768-dimensional embedding of the question text did not help either: it made test recall lower, which points to overfitting on this small dataset (appendix, \cref{fig:features}).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Q4: Do Better Frames Give Better Answers?}
+\label{sec:q4}
+
+\paragraph{Setup.}
+We give the 8 frames chosen by each method, together with the subtitle shown at each frame, to Qwen3-VL-8B-Instruct~\cite{bai2025qwen3vl} and ask it to answer the multiple-choice question.
+The learned predictors are tested only on the test questions of their own split (229 per seed), and are compared with the default weight on exactly the same questions.
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{5pt}
+  \begin{tabular}{lcc}
+    \toprule
+    Frames chosen by & QA accuracy & vs.\ $\lam=0.3$ (paired) \\
+    \midrule
+    \multicolumn{3}{l}{\emph{All 753 questions}} \\
+    Even spacing & 0.615 & \\
+    $\lam=0$ (visual only) & 0.604 & \\
+    $\lam=0.3$ (default) & 0.631 & \\
+    $\lam=0.7$ (best recall) & 0.627 & \\
+    $\lam=1$ (subtitles only) & 0.615 & \\
+    Oracle $\lam$ & 0.649 & \\
+    \midrule
+    \multicolumn{3}{l}{\emph{Test questions of the predictors ($3\times229$)}} \\
+    $\lam=0.3$ (default) & 0.648 & -- \\
+    LwF predictor & 0.652 & +0.4 \small{[$-$1.5, +2.3]} \\
+    Naive predictor & 0.643 & $-$0.4 \small{[$-$2.3, +1.5]} \\
+    Oracle $\lam$ & 0.658 & +1.0 \\
+    \bottomrule
+  \end{tabular}
+  \caption{\textbf{Question answering with Qwen3-VL-8B.} Brackets: 95\% bootstrap confidence interval of the paired difference. The LwF difference is not significant (McNemar $p=0.77$).}
+  \label{tab:qa}
+\end{table}
+
+\paragraph{Results.}
+Over all questions, the learned weight and the default weight give the same accuracy (\cref{tab:qa}).
+Even the oracle weight adds only 1.8 points.
+The constant with the best recall, $\lam=0.7$, answers slightly \emph{worse} than 0.3.
+So recall@8 is only a rough stand-in for answer quality.
+
+
+
+\paragraph{Where the weight helps.}
+Hitting the right moment does matter: at $\lam=0.3$, accuracy is 0.49 when the 8 frames hit none of the annotated moments and 0.75 when they hit all of them (\cref{fig:qa}a).
+We then split the questions into two groups (\cref{fig:qa}b).
+On the 469 questions where $\lam$ does not change the frames, all weight choices give the same answers, as expected.
+On the 284 questions where it does, the oracle weight answers 5 points more questions correctly than the default (0.673 vs.\ 0.623).
+The LwF predictor gains 1.5 points on its 266 such test questions, but the confidence interval $[-2.3, +5.6]$ still includes zero.
+In other words, the weight does matter for answering, but only for about 38\% of the questions, and the current predictor captures only a small part of that.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Four Mistakes That Reversed Our Conclusions}
+\label{sec:pitfalls}
+
+During the project, four problems let every experiment run without any error message but produced wrong results (\cref{tab:pitfalls}).
+Each of them changed our conclusion at some point.
+For example, before we fixed the last one, every learned weight looked 3 to 5 points \emph{worse} than the default, which would have led us to say that learning the weight does not work at all.
+Before we fixed the annotation frame rate, the gap between the default and the best constant was much smaller, and the default looked nearly optimal.
+We list them because anyone who reuses VSI's scores or LongVideoBench's annotations can easily make the same mistakes.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+\label{sec:discussion}
+
+\paragraph{Lessons.}
+For methods like VSI that mix two fixed models with one weight, the first step should be to tune that weight on the target data; this alone gives most of the gain.
+Any method that learns the weight should be compared with this tuned constant, not with the default from the original paper; otherwise the benefit of learning is overstated.
+When the only thing to learn is one number, different tasks do not compete much, forgetting stays small, and continual learning methods differ little.
+The harder problem is predicting per-question differences from very sparse supervision.
+
+\paragraph{Limitations.}
+We use one question per video, so each test split has only about 229 questions, which limits the statistical power of the QA experiment.
+With about two annotated moments per question, recall@8 is coarse.
+We use one dataset, one VLM, and a short sequence of four tasks.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\label{sec:conclusion}
+
+We studied whether the weight that mixes the visual and subtitle scores in VSI should change with the question, and whether it can be learned as question types arrive one after another.
+The best weight clearly depends on the question type, but the continually trained predictor collapses to almost one weight for all types, so it only ties a well-tuned constant.
+Better frames improve answers only for the minority of questions where the weight changes the frames.
+Most of the remaining gain lies in per-question differences, and learning them from sparse supervision is the key problem for future work.
+
+\FloatBarrier
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{main}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\appendix
+\onecolumn
+\section*{Appendix}
+
+\section{Details of the Two Fixes}
+
+
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\figdir/f08_gtfix.pdf}
+    \caption{(a) How well the annotations line up with the answer subtitle under the two frame-rate assumptions. (b) Recall as a function of $\lam$ before and after the fix.}
+    \label{fig:gtfix}
+  \end{minipage}\hfill
+  \begin{minipage}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\figdir/f05_decode.pdf}
+    \caption{(a) Continual learning ACC before and after using the weighted average at test time (old annotation mapping). (b) The same predictor's output weights under the two choices.}
+    \label{fig:decode}
+  \end{minipage}
+\end{figure}
+
+\section{Additional Results}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\linewidth]{\figdir/f07_features.pdf}
+  \caption{Test recall of a predictor trained on all tasks together with different inputs (old annotation mapping, mean $\pm$ std of 3 splits). The question-text embedding makes results worse; curve statistics plus our 44 per-question features work best.}
+  \label{fig:features}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\linewidth]{\figdir/f11_matrix.pdf}
+  \caption{Recall matrix: row $i$ is the test recall on each task after training on the $i$-th task (default order, mean of 3 seeds).}
+  \label{fig:matrix}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \begin{minipage}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\figdir/f09_v4_main.pdf}
+    \caption{Bar-chart version of \cref{tab:main}: (a) final accuracy with the baselines; (b) forgetting.}
+  \end{minipage}\hfill
+  \begin{minipage}{0.49\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{\figdir/f14_qa.pdf}
+    \caption{QA accuracy for all questions (a) and per task (b).}
+  \end{minipage}
+\end{figure}
+
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{lccccc}
+    \toprule
+    Method & ACC, basic inputs & ACC, + 44 per-question features & FM & vs.\ tuned constant \\
+    \midrule
+    Naive & 0.560 & 0.578 & 0.028 & +0.5 (7/9) \\
+    EWC & 0.568 & 0.587 & 0.017 & +1.3 (9/9) \\
+    LwF & 0.567 & 0.589 & 0.016 & +1.5 (8/9) \\
+    ER & 0.565 & 0.585 & 0.019 & +1.1 (8/9) \\
+    Joint & 0.575 & 0.589 & 0.018 & +1.5 (9/9) \\
+    \midrule
+    \multicolumn{5}{l}{Default 0.3 / tuned constant / per-task constant / oracle: 0.564 / 0.574 / 0.584 / 0.673} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Results with the old (wrong) annotation frame rate, kept as an ablation of the input features. Numbers are not comparable with \cref{tab:main}. Here the per-question features gave a 1.5-point gain over the tuned constant; after the fix this gain shrank to 0.6, so we treat it with caution.}
+  \label{tab:oldgt}
+\end{table}
+
+\section{Implementation Details}
+\begin{itemize}
+  \item \textbf{Scores.} Official VSI code; YOLO-World-S detector; subtitle branch with the sentence embedding model all-mpnet-base-v2~\cite{reimers2019sbert}; one score per second; both scores rescaled to $[0,1]$ with min-max scaling.
+  \item \textbf{44 per-question features.} For each curve (8 each): share of zeros, whether the curve is constant, mean, standard deviation, share of the total score held by the top 8 seconds, how spread out in time the top 8 seconds are, log number of peaks, and the gap between the 8th and 9th highest score. Between curves (4): Pearson and Spearman correlation, and overlap of their top-8 and top-32 seconds within $\pm5$ s. Sensitivity to $\lam$ (12): overlap of the top 8 at each grid value with the top 8 at $\lam=0.3$, and the number of distinct top-8 sets. Agreement (12): for each grid value, how much its top 8 agrees with the others, plus the most agreed-on value.
+  \item \textbf{Continual learning.} EWC weight 400; LwF temperature 2 and weight 1; ER buffer of 200 questions; kNN with $k=5$ on standardized inputs; weight decay $10^{-4}$.
+  \item \textbf{Question answering.} Qwen3-VL-8B-Instruct in bf16, at most $448\times448$ pixels per frame, greedy decoding, at most 8 new tokens. For each frame we add the subtitles within $\pm1$ s of its time; for clipped videos the subtitle times are shifted by the clip start.
+\end{itemize}
+
+\end{document}
